@@ -4442,3 +4442,75 @@ body.modal-open {
 
 }
 
+/* ============================================================
+   CERTIFICADOS - VISTA PREVIA MÓVIL
+============================================================ */
+
+/*
+    En computadora NO mostramos la imagen.
+    Seguimos utilizando el PDF.
+*/
+
+.cert-mobile-preview {
+    display: none;
+}
+
+
+/* ============================================================
+   TELÉFONO
+============================================================ */
+
+@media (max-width: 600px) {
+
+    /*
+        Ocultamos completamente el iframe PDF.
+
+        Esto evita que Chrome móvil intente
+        abrir/descargar el PDF automáticamente.
+    */
+
+    .cert-pdf-viewer iframe {
+        display: none !important;
+    }
+
+
+    /*
+        Mostramos nuestra propia vista previa.
+    */
+
+    .cert-mobile-preview {
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        padding: 8px;
+
+        overflow: auto;
+
+        background: #060b12;
+    }
+
+
+    .cert-mobile-preview img {
+        display: block;
+
+        width: auto;
+        height: auto;
+
+        max-width: 100%;
+        max-height: 100%;
+
+        object-fit: contain;
+
+        border-radius: 7px;
+
+        box-shadow:
+            0 10px 35px
+            rgba(0, 0, 0, 0.35);
+    }
+
+}

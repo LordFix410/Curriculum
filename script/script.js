@@ -724,6 +724,16 @@ const certModalMeta =
 const certPdfFrame =
     document.getElementById("certPdfFrame");
 
+const certMobilePreview =
+document.getElementById(
+    "certMobilePreview"
+);
+
+const certModalImage =
+    document.getElementById(
+        "certModalImage"
+    );
+
 const certPdfOpen =
     document.getElementById("certPdfOpen");
 
@@ -782,6 +792,9 @@ function cargarCertificado() {
         tarjeta.dataset.pdf ||
         "";
 
+    const imagen =
+        tarjeta.dataset.image ||
+        "";
 
     /* -----------------------------------------
        TÍTULO
@@ -824,10 +837,75 @@ function cargarCertificado() {
        PDF DENTRO DEL VISOR
     ----------------------------------------- */
 
-    if (certPdfFrame) {
+    /* ========================================================
+    VISTA SEGÚN DISPOSITIVO
+    ======================================================== */
 
-        certPdfFrame.src =
-            pdf;
+    const esMovil =
+        window.matchMedia(
+            "(max-width: 600px)"
+        ).matches;
+
+
+    /* --------------------------------------------------------
+    TELÉFONO
+    --------------------------------------------------------- */
+
+    if (esMovil) {
+
+        /*
+            MUY IMPORTANTE:
+            No cargamos el PDF en el iframe.
+
+            Así evitamos que Chrome/Safari móvil
+            intente descargarlo automáticamente.
+        */
+
+        if (certPdfFrame) {
+            certPdfFrame.src = "";
+        }
+
+        if (certModalImage) {
+
+            certModalImage.src = "";
+
+        }
+
+        if (certModalImage) {
+
+            certModalImage.src =
+                imagen;
+
+            certModalImage.alt =
+                `Certificado ${titulo}`;
+
+        }
+
+    }
+
+
+    /* --------------------------------------------------------
+    COMPUTADORA
+    --------------------------------------------------------- */
+
+    else {
+
+        /*
+            En computadora seguimos usando
+            el visor PDF nativo.
+        */
+
+        if (certModalImage) {
+            certModalImage.src = "";
+        }
+
+
+        if (certPdfFrame) {
+
+            certPdfFrame.src =
+                pdf;
+
+        }
 
     }
 
@@ -969,6 +1047,12 @@ function cerrarCertificado() {
     if (certPdfFrame) {
 
         certPdfFrame.src = "";
+
+    }
+
+    if (certModalImage) {
+
+        certModalImage.src = "";
 
     }
 

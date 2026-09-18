@@ -1691,6 +1691,7 @@
                 data-title="Tableau"
                 data-provider="Kodree"
                 data-pdf="documentos/tableau.pdf"
+                data-image="img/certificados/Tableau.webp"
                 tabindex="0"
                 role="button"
             >
@@ -1715,6 +1716,7 @@
                 data-title="Cybersecurity and AI"
                 data-provider="Kodree"
                 data-pdf="documentos/Cybersecurity and AI.pdf"
+                data-image="img/certificados/Cybersecurity-and-AI.webp"
                 tabindex="0"
                 role="button"
             >
@@ -1739,6 +1741,7 @@
                 data-title="Team Security"
                 data-provider="Kodree"
                 data-pdf="documentos/Team Security.pdf"
+                data-image="img/certificados/Team-Security.webp"
                 tabindex="0"
                 role="button"
             >
@@ -1763,6 +1766,7 @@
                 data-title="Data Analytics"
                 data-provider="Kodree"
                 data-pdf="documentos/Data Analytics.pdf"
+                data-image="img/certificados/Data-Analytics.webp"
                 tabindex="0"
                 role="button"
             >
@@ -1787,6 +1791,7 @@
                 data-title="How the Web Works"
                 data-provider="Kodree"
                 data-pdf="documentos/How the Web Works.pdf"
+                data-image="img/certificados/How-the-Web-Works.webp"
                 tabindex="0"
                 role="button"
             >
@@ -1811,6 +1816,7 @@
                 data-title="SQL"
                 data-provider="Kodree"
                 data-pdf="documentos/SQL.pdf"
+                data-image="img/certificados/SQL.webp"
                 tabindex="0"
                 role="button"
             >
@@ -1835,6 +1841,7 @@
                 data-title="Cybersecurity for non-tech professionals"
                 data-provider="Kodree"
                 data-pdf="documentos/Cybersecurity for non-tech Professionals.pdf"
+                data-image="img/certificados/Cybersecurity-for-Non-Tech-Professionals.webp"
                 tabindex="0"
                 role="button"
             >
@@ -1863,6 +1870,7 @@
                 data-provider="Kodree"
                 data-date="18 de marzo de 2026"
                 data-pdf="documentos/Git and Terminal.pdf"
+                data-image="img/certificados/Git-and-Terminal.webp"
                 tabindex="0"
                 role="button"
             >
@@ -2315,11 +2323,30 @@
 
         <div class="cert-pdf-viewer">
 
+            <!-- PDF PARA COMPUTADORA -->
+
             <iframe
                 id="certPdfFrame"
                 src=""
                 title="Visor de certificado PDF"
             ></iframe>
+
+
+            <!-- IMAGEN PARA TELÉFONO -->
+
+            <div
+                class="cert-mobile-preview"
+                id="certMobilePreview"
+            >
+
+                <img
+                    id="certModalImage"
+                    src=""
+                    alt="Vista previa del certificado"
+                    draggable="false"
+                >
+
+            </div>
 
         </div>
 
