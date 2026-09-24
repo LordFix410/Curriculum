@@ -15,6 +15,37 @@
    ELEMENTOS
 ============================================================ */
 
+/* ============================================================
+   HEADER DINÁMICO
+============================================================ */
+
+const header =
+    document.querySelector(".header");
+
+
+function actualizarHeader() {
+
+    if (!header) {
+        return;
+    }
+
+    header.classList.toggle(
+        "header-scrolled",
+        window.scrollY > 30
+    );
+}
+
+
+window.addEventListener(
+    "scroll",
+    actualizarHeader,
+    {
+        passive: true
+    }
+);
+
+
+actualizarHeader();
 const btnMenu =
     document.getElementById("btnMenu");
 
@@ -29,6 +60,7 @@ const enlacesNavegacion =
         ".nav-links a[href^='#']"
     );
 
+    
 
 /* ============================================================
    MENÚ MÓVIL
@@ -279,7 +311,7 @@ const elementosAnimados =
 
         .learning-note,
 
-        .cert-card,
+        .cert-item,
 
         .cert-note,
 

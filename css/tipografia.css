@@ -1,0 +1,885 @@
+/* ============================================================
+   TIPOGRAFIA.CSS — ESCALA TIPOGRÁFICA UNIFICADA
+   Portafolio: Jair Abdiel Carcúz López
+
+   CÓMO USARLO
+   Cárgalo DESPUÉS de style.css en tu index.html:
+
+     <link rel="stylesheet" href="css/style.css">
+     <link rel="stylesheet" href="css/tipografia.css">
+
+   QUÉ HACE
+   - Reemplaza todos los tamaños de letra por una escala de 7 niveles.
+   - Ningún texto baja de ~11.5px (antes había textos de 7 a 9px).
+   - Ningún título se dispara (antes h2 de hasta 77px, contacto 107px).
+   - Sube el contraste de los textos grises apagados (#555c66 sobre
+     fondo casi negro era ilegible).
+   - Sólo toca font-size, color de texto, letter-spacing y line-height.
+     NO toca layout, espaciados ni el visor de certificados (.cert-modal*).
+
+   PARA AJUSTAR TODO A LA VEZ: cambia las variables de abajo.
+============================================================ */
+
+
+/* ============================================================
+   1. ESCALA (tokens)
+============================================================ */
+
+:root {
+
+    /* --- Tamaños ------------------------------------------------ */
+
+    --fs-label:   0.72rem;   /* ~11.5px  etiquetas MAYÚSCULAS cortas   */
+    --fs-caption: 0.82rem;   /* ~13px    metadatos, tags, notas         */
+    --fs-small:   0.9rem;    /* ~14.5px  descripciones secundarias      */
+    --fs-body:    1rem;      /* 16px     texto de lectura               */
+    --fs-lead:    1.125rem;  /* 18px     introducciones                 */
+
+    --fs-h3:      clamp(1.25rem, 1.05rem + 0.7vw, 1.6rem);   /* títulos de tarjeta / fila */
+    --fs-h2:      clamp(2.1rem, 1rem + 3.6vw, 3.4rem);       /* títulos de sección        */
+    --fs-display: clamp(2.6rem, 1.2rem + 5vw, 4.4rem);       /* hero / proyecto / contacto*/
+    --fs-number:  clamp(2rem, 1.4rem + 1.8vw, 2.75rem);      /* cifras grandes            */
+
+
+    /* --- Colores de texto con contraste suficiente -------------- */
+
+    --tx-strong: #f1f3f5;    /* títulos                                */
+    --tx-body:   #b4bbc6;    /* párrafos                               */
+    --tx-muted:  #9aa3b0;    /* descripciones secundarias              */
+    --tx-label:  #8b94a3;    /* etiquetas pequeñas                     */
+    --tx-index:  rgba(255, 255, 255, 0.42); /* números 01, 02, 03…     */
+}
+
+
+/* ============================================================
+   2. BASE
+============================================================ */
+
+html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+body {
+    font-size: var(--fs-body);
+    line-height: 1.65;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+/* ============================================================
+   3. TÍTULOS DE SECCIÓN (h2) — todos iguales
+============================================================ */
+
+.about-heading h2,
+.tech-heading h2,
+.experience-heading h2,
+.projects-heading h2,
+.certifications-heading h2,
+.learning-heading h2,
+.education-heading h2,
+.documentation-main h2 {
+    font-size: var(--fs-h2) !important;
+    line-height: 1.05 !important;
+    letter-spacing: -0.025em !important;
+}
+
+/* Párrafo bajo cada título de sección */
+
+.tech-heading p,
+.experience-heading p,
+.projects-heading p,
+.certifications-heading p,
+.learning-heading p,
+.education-heading p {
+    font-size: var(--fs-body) !important;
+    line-height: 1.7 !important;
+    color: var(--tx-muted) !important;
+    max-width: 60ch;
+}
+
+/* Número de sección (01, 02…) */
+
+.about-heading-number,
+.tech-heading-number,
+.experience-heading-number,
+.projects-heading-number,
+.certifications-heading-number,
+.learning-heading-number,
+.education-heading-number {
+    font-size: var(--fs-label) !important;
+    color: var(--tx-index) !important;
+}
+
+/* Kickers (etiqueta de color sobre el título) */
+
+.about-kicker,
+.tech-kicker,
+.experience-kicker,
+.projects-kicker,
+.certifications-kicker,
+.learning-kicker,
+.education-kicker,
+.documentation-kicker,
+.contact-kicker {
+    font-size: var(--fs-label) !important;
+    letter-spacing: 0.16em !important;
+}
+
+
+/* ============================================================
+   4. HEADER
+============================================================ */
+
+.nav-links a {
+    font-size: 0.875rem;
+}
+
+.nav-contact {
+    font-size: 0.85rem;
+}
+
+.logo-name {
+    font-size: 0.85rem;
+}
+
+
+/* ============================================================
+   5. HERO
+============================================================ */
+
+.hero-eyebrow {
+    font-size: var(--fs-label);
+    color: var(--tx-muted);
+}
+
+.hero h1 {
+    font-size: var(--fs-display);
+    line-height: 1.02;
+    letter-spacing: -0.03em;
+}
+
+.hero-intro {
+    font-size: var(--fs-lead);
+    line-height: 1.75;
+    color: var(--tx-muted);
+}
+
+.hero-stack span {
+    font-size: var(--fs-caption);
+    padding: 6px 12px;
+    color: var(--tx-body);
+}
+
+.btn {
+    font-size: 0.9rem;
+}
+
+.hero-meta p {
+    font-size: 0.9rem !important;
+    color: var(--tx-body);
+}
+
+.hero-meta small {
+    font-size: var(--fs-label) !important;
+    color: var(--tx-label);
+}
+
+.hero-floating-card small {
+    font-size: 0.66rem;
+    color: var(--tx-label);
+}
+
+.hero-floating-card strong {
+    font-size: 0.85rem;
+}
+
+.hero-identity span {
+    font-size: 0.78rem;
+    color: var(--tx-muted);
+}
+
+.hero-identity strong {
+    font-size: 1.15rem;
+}
+
+.hero-identity small {
+    font-size: 0.66rem;
+    color: var(--tx-label);
+}
+
+.hero-scroll {
+    color: var(--tx-label);
+}
+
+.hero-scroll span:first-child {
+    font-size: 0.66rem;
+}
+
+
+/* ============================================================
+   6. SOBRE MÍ
+============================================================ */
+
+.about-lead {
+    font-size: clamp(1.4rem, 1.05rem + 1.4vw, 2rem);
+    line-height: 1.32;
+    color: #d6d3d1;
+}
+
+.about-copy p {
+    font-size: var(--fs-body);
+    line-height: 1.8;
+    color: var(--tx-body);
+}
+
+.about-copy strong {
+    color: var(--tx-strong);
+}
+
+.about-fact-number {
+    font-size: var(--fs-number);
+}
+
+.about-fact small {
+    font-size: var(--fs-label);
+    color: var(--tx-label);
+}
+
+.about-fact strong {
+    font-size: 0.95rem;
+    color: var(--tx-body);
+}
+
+.about-focus > span {
+    font-size: var(--fs-label);
+    color: var(--tx-label);
+}
+
+.about-focus p {
+    font-size: 0.95rem;
+    color: var(--tx-strong);
+}
+
+.about-bottom p {
+    font-size: var(--fs-small);
+    color: var(--tx-muted);
+}
+
+.about-bottom strong {
+    color: var(--tx-body);
+}
+
+
+/* ============================================================
+   7. TECNOLOGÍAS
+============================================================ */
+
+.tech-index {
+    font-size: var(--fs-label);
+    color: var(--tx-index);
+}
+
+.tech-category {
+    font-size: var(--fs-label) !important;
+    letter-spacing: 0.14em;
+}
+
+.tech-item h3 {
+    font-size: var(--fs-h3) !important;
+}
+
+.tech-item-content p {
+    font-size: var(--fs-small) !important;
+    line-height: 1.65 !important;
+    color: var(--tx-muted);
+    max-width: 38ch;
+}
+
+.tech-list span {
+    font-size: var(--fs-caption) !important;
+    color: var(--tx-body);
+}
+
+.tech-footer p {
+    font-size: var(--fs-small);
+    color: var(--tx-muted);
+}
+
+.tech-footer p strong {
+    color: var(--tx-body);
+}
+
+.tech-footer > span {
+    font-size: var(--fs-label);
+    color: var(--tx-index);
+}
+
+
+/* ============================================================
+   8. EXPERIENCIA
+============================================================ */
+
+.experience-year {
+    font-size: var(--fs-number);
+}
+
+.experience-period {
+    font-size: var(--fs-label);
+}
+
+.experience-type,
+.experience-status {
+    font-size: var(--fs-label);
+}
+
+.experience-company h3 {
+    font-size: var(--fs-h3);
+    max-width: 22ch;
+}
+
+.experience-details h4 {
+    font-size: 1.05rem;
+    line-height: 1.45;
+    color: #e2e5ea;
+}
+
+.experience-details p {
+    font-size: var(--fs-small) !important;
+    line-height: 1.7 !important;
+    color: var(--tx-muted);
+}
+
+.experience-tags span {
+    font-size: var(--fs-caption);
+    color: var(--tx-body);
+}
+
+.experience-footer > span {
+    font-size: var(--fs-label);
+    color: var(--tx-index);
+}
+
+.experience-footer p {
+    font-size: var(--fs-small);
+    color: var(--tx-muted);
+}
+
+.experience-footer strong {
+    color: var(--tx-body);
+}
+
+
+/* ============================================================
+   9. PROYECTOS
+============================================================ */
+
+/* Proyecto principal */
+
+.project-main-label {
+    font-size: var(--fs-label);
+}
+
+.project-main-number {
+    color: var(--tx-index);
+}
+
+.project-category {
+    font-size: var(--fs-label);
+    line-height: 1.6;
+}
+
+.project-main-info h3 {
+    font-size: var(--fs-display);
+    line-height: 0.98;
+    letter-spacing: -0.03em;
+}
+
+.project-main-description {
+    font-size: var(--fs-body);
+    line-height: 1.75;
+    color: var(--tx-muted);
+}
+
+.project-tech-line span {
+    font-size: var(--fs-caption);
+    color: var(--tx-body);
+}
+
+.project-link {
+    font-size: 0.88rem;
+}
+
+.project-feature > span {
+    font-size: var(--fs-label);
+}
+
+.project-feature p {
+    font-size: var(--fs-small);
+    line-height: 1.6;
+    color: var(--tx-muted);
+}
+
+/* Subtítulo "Más trabajo" */
+
+.projects-subheading span {
+    font-size: var(--fs-label);
+    color: var(--tx-label);
+}
+
+.projects-subheading p {
+    font-size: var(--fs-caption);
+    color: var(--tx-muted);
+}
+
+/* Filas de proyectos */
+
+.project-row-number {
+    font-size: var(--fs-label) !important;
+    color: var(--tx-index);
+}
+
+.project-row-title > span {
+    font-size: var(--fs-label) !important;
+}
+
+.project-row-title h3 {
+    font-size: var(--fs-h3) !important;
+    line-height: 1.15 !important;
+}
+
+.project-row-content > p {
+    font-size: var(--fs-small) !important;
+    line-height: 1.65 !important;
+    color: var(--tx-muted);
+    max-width: 62ch !important;
+}
+
+.project-row-content .project-tech-line {
+    font-size: var(--fs-caption) !important;
+}
+
+.project-inline-links a {
+    font-size: var(--fs-caption) !important;
+    color: var(--tx-body);
+}
+
+.projects-footer p {
+    font-size: var(--fs-caption);
+    color: var(--tx-muted);
+}
+
+.projects-footer p strong {
+    color: var(--tx-body);
+}
+
+.projects-footer > a {
+    font-size: 0.85rem;
+}
+
+
+/* ============================================================
+   10. CERTIFICACIONES (lista, NO el visor)
+============================================================ */
+
+.certifications-summary strong {
+    font-size: var(--fs-number);
+}
+
+.certifications-summary span {
+    font-size: var(--fs-label);
+}
+
+.certifications-summary p {
+    font-size: var(--fs-caption);
+    color: var(--tx-muted);
+}
+
+.cert-number {
+    font-size: var(--fs-label) !important;
+    color: var(--tx-index);
+}
+
+.cert-category {
+    font-size: var(--fs-label) !important;
+}
+
+.cert-info h3 {
+    font-size: 1.15rem !important;
+    line-height: 1.25;
+}
+
+.cert-info p {
+    font-size: var(--fs-caption) !important;
+    color: var(--tx-muted);
+}
+
+.cert-provider {
+    font-size: var(--fs-caption) !important;
+    color: var(--tx-label);
+}
+
+.certifications-footer p {
+    font-size: var(--fs-caption);
+    color: var(--tx-muted);
+}
+
+.certifications-footer strong {
+    color: var(--tx-body);
+}
+
+
+/* ============================================================
+   11. FORMACIÓN EN CURSO
+============================================================ */
+
+.learning-active {
+    font-size: var(--fs-label);
+}
+
+.learning-overview-main h3 {
+    font-size: clamp(1.75rem, 1.1rem + 2.4vw, 2.6rem);
+    line-height: 1.08;
+    letter-spacing: -0.025em;
+}
+
+.learning-overview-main > p {
+    font-size: var(--fs-body);
+    line-height: 1.75;
+    color: var(--tx-muted);
+}
+
+.learning-provider small {
+    font-size: var(--fs-label);
+    color: var(--tx-label);
+}
+
+.learning-provider strong {
+    font-size: 1.1rem;
+}
+
+.learning-provider div span {
+    font-size: var(--fs-caption);
+    color: var(--tx-muted);
+}
+
+.learning-row-number {
+    font-size: var(--fs-label) !important;
+    color: var(--tx-index);
+}
+
+.learning-row-info > span {
+    font-size: var(--fs-label) !important;
+}
+
+.learning-row-info h3 {
+    font-size: var(--fs-h3) !important;
+    line-height: 1.2 !important;
+}
+
+.learning-row-info > p {
+    font-size: var(--fs-small) !important;
+    line-height: 1.6 !important;
+    color: var(--tx-muted);
+}
+
+.learning-progress-top span {
+    font-size: var(--fs-label) !important;
+    color: var(--tx-label);
+}
+
+.learning-progress-top strong {
+    font-size: 1.15rem !important;
+}
+
+.learning-progress-bar {
+    height: 4px;
+}
+
+.learning-subcourse small {
+    font-size: 0.66rem;
+    color: var(--tx-label);
+}
+
+.learning-subcourse strong {
+    font-size: var(--fs-caption);
+    color: var(--tx-body);
+}
+
+.learning-subcourse > span {
+    font-size: 0.95rem;
+}
+
+.learning-note p {
+    font-size: var(--fs-caption);
+    line-height: 1.65;
+    color: var(--tx-muted);
+}
+
+.learning-note strong {
+    color: var(--tx-body);
+}
+
+.learning-note .material-symbols-outlined {
+    color: var(--tx-label);
+}
+
+
+/* ============================================================
+   12. FORMACIÓN ACADÉMICA
+============================================================ */
+
+.education-state,
+.education-type {
+    font-size: var(--fs-label) !important;
+}
+
+.education-meta strong {
+    font-size: var(--fs-label) !important;
+    color: var(--tx-label);
+}
+
+.education-content h3 {
+    font-size: clamp(1.5rem, 1.1rem + 1.6vw, 2.1rem) !important;
+    line-height: 1.12 !important;
+    letter-spacing: -0.02em;
+}
+
+.education-content h3 span {
+    color: var(--tx-muted);
+}
+
+.education-content > p {
+    font-size: var(--fs-body) !important;
+    line-height: 1.6 !important;
+    color: var(--tx-muted);
+}
+
+.education-progress span {
+    font-size: var(--fs-label) !important;
+    color: var(--tx-label);
+}
+
+.education-progress strong {
+    font-size: 0.9rem;
+}
+
+.education-footer {
+    font-size: var(--fs-label);
+    color: var(--tx-label);
+}
+
+
+/* ============================================================
+   13. DOCUMENTACIÓN
+============================================================ */
+
+.documentation-main h2 {
+    max-width: 16ch;
+}
+
+.documentation-main > p {
+    font-size: var(--fs-body) !important;
+    line-height: 1.7 !important;
+    color: var(--tx-muted);
+}
+
+.documentation-download small {
+    font-size: 0.66rem;
+}
+
+.documentation-download strong {
+    font-size: 0.95rem;
+}
+
+.documentation-cert-link {
+    font-size: 0.88rem;
+    color: var(--tx-body);
+}
+
+.documentation-panel-heading {
+    font-size: var(--fs-label) !important;
+    color: var(--tx-label);
+}
+
+.documentation-number {
+    font-size: var(--fs-label);
+    color: var(--tx-index);
+}
+
+.documentation-item small {
+    font-size: var(--fs-label) !important;
+    color: var(--tx-label);
+}
+
+.documentation-item strong {
+    font-size: 0.95rem !important;
+    color: var(--tx-strong);
+}
+
+.documentation-available,
+.documentation-restricted {
+    font-size: 0.68rem !important;
+}
+
+.documentation-restricted {
+    color: var(--tx-label);
+}
+
+
+/* ============================================================
+   14. CONTACTO
+============================================================ */
+
+.contact-intro h2 {
+    font-size: var(--fs-display) !important;
+    line-height: 1 !important;
+    letter-spacing: -0.03em !important;
+}
+
+.contact-intro h2 span {
+    color: var(--tx-muted);
+}
+
+.contact-intro p {
+    font-size: var(--fs-body) !important;
+    line-height: 1.7 !important;
+    color: var(--tx-muted);
+}
+
+.contact-main > span {
+    font-size: var(--fs-label);
+    color: var(--tx-label);
+}
+
+.contact-email {
+    font-size: clamp(1.2rem, 0.7rem + 2.6vw, 2.4rem);
+    letter-spacing: -0.02em;
+    overflow-wrap: anywhere;
+}
+
+.contact-link small {
+    font-size: var(--fs-label);
+    color: var(--tx-label);
+}
+
+.contact-link strong {
+    font-size: 1rem;
+    color: var(--tx-strong);
+}
+
+.contact-availability > span {
+    font-size: var(--fs-label);
+}
+
+.contact-availability p {
+    font-size: var(--fs-caption);
+    color: var(--tx-label);
+}
+
+
+/* ============================================================
+   15. FOOTER
+============================================================ */
+
+.footer-identity > strong {
+    font-size: 0.75rem;
+}
+
+.footer-identity span {
+    font-size: 0.9rem !important;
+    color: var(--tx-body);
+}
+
+.footer-identity small {
+    font-size: var(--fs-caption) !important;
+    color: var(--tx-label);
+}
+
+.footer-message {
+    font-size: 0.68rem;
+    color: var(--tx-label);
+}
+
+.footer-top {
+    font-size: 0.72rem;
+    color: var(--tx-muted);
+}
+
+.footer-bottom {
+    font-size: 0.72rem;
+    color: var(--tx-label);
+}
+
+
+/* ============================================================
+   16. MÓVIL — ajustes finos
+   (los títulos ya escalan solos con clamp)
+============================================================ */
+
+@media (max-width: 760px) {
+
+    .hero h1 {
+        letter-spacing: -0.025em;
+    }
+
+    .hero-intro {
+        font-size: 1.05rem;
+    }
+
+    .hero-meta p {
+        font-size: 0.9rem !important;
+    }
+
+    .hero-meta small {
+        font-size: var(--fs-label) !important;
+    }
+
+    .about-lead {
+        font-size: 1.4rem;
+    }
+
+    .project-main-info h3 {
+        font-size: clamp(2.5rem, 12vw, 3.4rem);
+    }
+
+    .project-row-title h3 {
+        font-size: 1.4rem !important;
+    }
+
+    .learning-row-info h3 {
+        font-size: 1.3rem !important;
+    }
+
+    .contact-intro h2 {
+        font-size: clamp(2.6rem, 13vw, 3.6rem) !important;
+    }
+
+    .experience-year {
+        font-size: 2.4rem;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .hero-eyebrow {
+        font-size: 0.66rem;
+    }
+
+    .about-heading h2,
+    .tech-heading h2,
+    .experience-heading h2,
+    .projects-heading h2,
+    .certifications-heading h2,
+    .learning-heading h2,
+    .education-heading h2,
+    .documentation-main h2 {
+        font-size: clamp(2.1rem, 10.5vw, 2.6rem) !important;
+    }
+
+    .contact-email {
+        font-size: clamp(1.05rem, 5.2vw, 1.4rem);
+    }
+}

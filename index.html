@@ -56,6 +56,7 @@
         rel="stylesheet"
         href="css/style.css"
     >
+    <link rel="stylesheet" href="css/tipografia.css">
     <link rel="icon" type="image/x-icon" href="img/icono/favicon.ico?v=2">
 
 </head>
@@ -65,53 +66,48 @@
 
 
 <!-- =========================================================
-     NAVEGACIÓN
+     HEADER
 ========================================================== -->
 
 <header class="header">
 
     <nav class="nav container">
 
-        <a
-            href="#inicio"
-            class="logo"
-        >
-            <span>&lt;</span>
-            Kaizen JA
-            <span>/&gt;</span>
+        <a href="#inicio" class="logo" aria-label="Ir al inicio">
+
+            <span class="logo-symbol">&lt;</span>
+
+            <span class="logo-name">
+                JA
+            </span>
+
+            <span class="logo-symbol">/&gt;</span>
+
         </a>
 
 
-        <div
-            class="nav-links"
-            id="navLinks"
-        >
+        <div class="nav-links" id="navLinks">
 
-            <a href="#sobre-mi">
-                Sobre mí
-            </a>
-
-            <a href="#experiencia">
-                Experiencia
-            </a>
-
-            <a href="#proyectos">
-                Proyectos
-            </a>
-
-            <a href="#formacion">
-                Formación
-            </a>
-
-            <a href="#certificaciones">
-                Certificaciones
-            </a>
-
-            <a href="#contacto">
-                Contacto
-            </a>
+            <a href="#sobre-mi">Sobre mí</a>
+            <a href="#experiencia">Experiencia</a>
+            <a href="#proyectos">Proyectos</a>
+            <a href="#formacion">Formación</a>
+            <a href="#certificaciones">Certificados</a>
+            <a href="#contacto">Contacto</a>
 
         </div>
+
+
+        <a
+            href="#contacto"
+            class="nav-contact"
+        >
+            Hablemos
+
+            <span class="material-symbols-outlined">
+                arrow_outward
+            </span>
+        </a>
 
 
         <button
@@ -142,61 +138,93 @@
     id="inicio"
 >
 
+    <!-- ELEMENTOS DECORATIVOS -->
+
+    <div class="hero-orb hero-orb-one"></div>
+    <div class="hero-orb hero-orb-two"></div>
+
+    <div class="hero-grid-pattern"></div>
+
+
     <div class="container hero-grid">
 
 
         <!-- =================================================
-             INFORMACIÓN PRINCIPAL
+             CONTENIDO
         ================================================== -->
 
         <div class="hero-content">
 
-            <span class="hero-label">
-                PORTAFOLIO PROFESIONAL
-            </span>
+
+            <div class="hero-eyebrow">
+
+                <span class="hero-eyebrow-dot"></span>
+
+                <span>
+                    INGENIERÍA · SOFTWARE · INFRAESTRUCTURA
+                </span>
+
+            </div>
 
 
             <h1>
 
-                Hola, soy
+                Construyo soluciones
 
-                <span>
-                    Jair Abdiel
-                    <br>
-                    Carcúz López
+                <span class="hero-title-accent">
+                    que conectan
                 </span>
+
+                software y tecnología.
 
             </h1>
 
 
-            <h2>
-                Ingeniería en Sistemas · Desarrollo de Software ·
-                Infraestructura TI · Automatización
-            </h2>
+            <p class="hero-intro">
 
+                Soy
 
-            <p>
+                <strong>
+                    Jair Abdiel Carcúz López
+                </strong>,
 
-                Estudiante de Ingeniería en Sistemas con experiencia
-                práctica desarrollando e implementando soluciones de
-                software, servidores, redes, automatización y
-                plataformas web.
+                estudiante de Ingeniería en Sistemas y desarrollador
+                enfocado en convertir necesidades reales en
+
+                <span>
+                    aplicaciones, automatizaciones e infraestructura funcional.
+                </span>
 
             </p>
 
+
+            <!-- STACK RÁPIDO -->
+
+            <div class="hero-stack">
+
+                <span>Python</span>
+                <span>C# / .NET</span>
+                <span>JavaScript</span>
+                <span>SQL</span>
+                <span>Infraestructura TI</span>
+
+            </div>
+
+
+            <!-- BOTONES -->
 
             <div class="hero-buttons">
 
                 <a
                     href="#proyectos"
-                    class="btn btn-primary"
+                    class="btn btn-primary hero-main-btn"
                 >
 
-                    <span class="material-symbols-outlined">
-                        terminal
-                    </span>
+                    Explorar proyectos
 
-                    Ver proyectos
+                    <span class="material-symbols-outlined">
+                        arrow_downward
+                    </span>
 
                 </a>
 
@@ -220,7 +248,7 @@
                     href="https://github.com/LordFix410"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="btn btn-secondary"
+                    class="btn btn-ghost"
                 >
 
                     <span class="material-symbols-outlined">
@@ -234,58 +262,9 @@
             </div>
 
 
-            <div class="hero-status">
+            <!-- INFORMACIÓN RÁPIDA -->
 
-                <span class="status-dot"></span>
-
-                Documentos legales solamente disponibles en presencial o en entrevista, por seguridad.
-
-            </div>
-
-        </div>
-
-
-
-        <!-- =================================================
-             TARJETA DE PERFIL
-        ================================================== -->
-
-        <div class="profile-card">
-
-            <div class="profile-photo">
-
-                    <img
-                        src="img/perfil/jair.png"
-                        alt="Jair Abdiel Carcúz López"
-                    >
-            </div>
-
-
-            <h3>
-                Jair Abdiel Carcúz
-            </h3>
-
-
-            <span class="profile-career">
-                Ingeniería en Sistemas
-            </span>
-
-
-            <div class="profile-info">
-
-                <div>
-
-                    <span class="material-symbols-outlined">
-                        school
-                    </span>
-
-                    <p>
-                        <strong>Universidad</strong>
-                        Universidad Mariano Gálvez
-                    </p>
-
-                </div>
-
+            <div class="hero-meta">
 
                 <div>
 
@@ -294,8 +273,22 @@
                     </span>
 
                     <p>
-                        <strong>Ubicación</strong>
+                        <small>UBICACIÓN</small>
                         Sacatepéquez, Guatemala
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <span class="material-symbols-outlined">
+                        school
+                    </span>
+
+                    <p>
+                        <small>FORMACIÓN</small>
+                        Ingeniería en Sistemas
                     </p>
 
                 </div>
@@ -308,7 +301,7 @@
                     </span>
 
                     <p>
-                        <strong>Idiomas</strong>
+                        <small>IDIOMAS</small>
                         Español · Inglés B1
                     </p>
 
@@ -318,9 +311,144 @@
 
         </div>
 
+
+
+        <!-- =================================================
+             VISUAL / PERFIL
+        ================================================== -->
+
+        <div class="hero-visual">
+
+
+            <div class="hero-photo-shell">
+
+
+                <div class="hero-photo-decoration"></div>
+
+
+                <div class="hero-photo">
+
+                    <img
+                        src="img/perfil/jair.png"
+                        alt="Jair Abdiel Carcúz López"
+                    >
+
+                </div>
+
+
+                <!-- ETIQUETA SUPERIOR -->
+
+                <div class="hero-floating-card hero-floating-top">
+
+                    <span class="material-symbols-outlined">
+                        terminal
+                    </span>
+
+                    <div>
+
+                        <small>
+                            ENFOQUE
+                        </small>
+
+                        <strong>
+                            Desarrollo + TI
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ETIQUETA INFERIOR -->
+
+                <div class="hero-floating-card hero-floating-bottom">
+
+                    <span class="hero-availability-dot"></span>
+
+                    <div>
+
+                        <small>
+                            ACTUALMENTE
+                        </small>
+
+                        <strong>
+                            Construyendo proyectos
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- FIRMA / IDENTIDAD -->
+
+            <div class="hero-identity">
+
+                <span>
+                    JAIR ABDIEL
+                </span>
+
+                <strong>
+                    CARCÚZ
+                </strong>
+
+                <small>
+                    SOFTWARE · AUTOMATIZACIÓN · INFRAESTRUCTURA
+                </small>
+
+            </div>
+
+
+        </div>
+
+
     </div>
 
+
+    <!-- SCROLL -->
+
+    <a
+        href="#sobre-mi"
+        class="hero-scroll"
+        aria-label="Continuar hacia Sobre mí"
+    >
+
+        <span>
+            DESCUBRIR
+        </span>
+
+        <span class="material-symbols-outlined">
+            south
+        </span>
+
+    </a>
+
+
 </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -329,26 +457,31 @@
 ========================================================== -->
 
 <section
-    class="section"
+    class="section about-section"
     id="sobre-mi"
 >
 
     <div class="container">
 
-        <div class="section-heading">
 
-            <span>
+        <!-- CABECERA -->
+
+        <div class="about-heading">
+
+            <div class="about-heading-number">
                 01
-            </span>
+            </div>
 
-            <div>
 
-                <small>
-                    PERFIL
-                </small>
+            <div class="about-heading-text">
+
+                <span class="about-kicker">
+                    UN POCO SOBRE MÍ
+                </span>
 
                 <h2>
-                    Sobre mí
+                    Tecnología con
+                    <span>propósito.</span>
                 </h2>
 
             </div>
@@ -356,100 +489,194 @@
         </div>
 
 
-        <div class="about-grid">
+        <!-- CONTENIDO -->
+
+        <div class="about-layout">
 
 
-            <div class="about-text">
+            <!-- TEXTO PRINCIPAL -->
 
-                <p>
+            <div class="about-main">
 
-                    Soy estudiante de
+                <p class="about-lead">
+
+                    Me gusta construir cosas que
                     <strong>
-                        Ingeniería en Sistemas de Información y
-                        Ciencias de la Computación
-                    </strong>,
-                    con experiencia en desarrollo de software,
-                    infraestructura tecnológica, redes,
-                    automatización y bases de datos.
-
-                </p>
-
-
-                <p>
-
-                    Me interesa especialmente desarrollar soluciones
-                    que integren
-                    <strong>
-                        software, hardware, redes y automatización
+                        realmente resuelvan problemas.
                     </strong>
-                    para resolver necesidades reales.
 
                 </p>
 
 
-                <p>
+                <div class="about-copy">
 
-                    He trabajado con tecnologías como
-                    <strong>
+                    <p>
+
+                        Soy estudiante de
+                        <strong>
+                            Ingeniería en Sistemas de Información y
+                            Ciencias de la Computación
+                        </strong>,
+                        con experiencia práctica en desarrollo de software,
+                        infraestructura tecnológica, redes, automatización
+                        y bases de datos.
+
+                    </p>
+
+
+                    <p>
+
+                        Mi enfoque no se limita únicamente al código.
+                        Me interesa entender cómo se conectan
+                        <strong>
+                            software, hardware, redes e infraestructura
+                        </strong>
+                        para construir soluciones completas.
+
+                    </p>
+
+
+                    <p>
+
+                        He trabajado con tecnologías como
                         C#, ASP.NET Core, Python, JavaScript,
-                        SQL Server y Cloudflare
-                    </strong>,
-                    además de infraestructura de redes y sistemas
-                    audiovisuales.
+                        SQL Server y Cloudflare, además de
+                        infraestructura de redes y sistemas audiovisuales.
 
-                </p>
+                    </p>
+
+                </div>
 
             </div>
 
 
+            <!-- DATOS -->
 
-            <div class="about-stats">
+            <aside class="about-side">
 
-                <div class="stat-card">
 
-                    <strong>
+                <div class="about-fact about-fact-main">
+
+                    <span class="about-fact-number">
                         8.º
-                    </strong>
-
-                    <span>
-                        Semestre de Ingeniería
                     </span>
+
+                    <div>
+
+                        <small>
+                            ACTUALMENTE
+                        </small>
+
+                        <strong>
+                            Semestre de Ingeniería
+                        </strong>
+
+                    </div>
 
                 </div>
 
 
-                <div class="stat-card">
+                <div class="about-fact">
 
-                    <strong>
+                    <span class="about-fact-number">
                         3+
-                    </strong>
-
-                    <span>
-                        Años de experiencia práctica
                     </span>
+
+                    <div>
+
+                        <small>
+                            EXPERIENCIA
+                        </small>
+
+                        <strong>
+                            Años construyendo y aprendiendo
+                        </strong>
+
+                    </div>
 
                 </div>
 
 
-                <div class="stat-card">
-
-                    <strong>
-                        Full
-                    </strong>
+                <div class="about-focus">
 
                     <span>
-                        Software + Infraestructura
+                        MI ENFOQUE
                     </span>
+
+                    <p>
+                        Desarrollo
+                        <i>×</i>
+                        Infraestructura
+                        <i>×</i>
+                        Automatización
+                    </p>
 
                 </div>
 
-            </div>
+
+            </aside>
+
 
         </div>
+
+
+        <!-- FRASE INFERIOR -->
+
+        <div class="about-bottom">
+
+            <span></span>
+
+            <p>
+                No solo aprender tecnología.
+                <strong>
+                    Entenderla, conectarla y construir con ella.
+                </strong>
+            </p>
+
+        </div>
+
 
     </div>
 
 </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -457,185 +684,360 @@
      TECNOLOGÍAS
 ========================================================== -->
 
-<section class="section section-alt">
+<section
+    class="section tech-section"
+    id="tecnologias"
+>
 
     <div class="container">
 
-        <div class="section-heading">
 
-            <span>
+        <!-- CABECERA -->
+
+        <div class="tech-heading">
+
+            <div class="tech-heading-number">
                 02
-            </span>
+            </div>
 
-            <div>
 
-                <small>
-                    STACK
-                </small>
+            <div class="tech-heading-content">
+
+                <span class="tech-kicker">
+                    STACK & HERRAMIENTAS
+                </span>
 
                 <h2>
-                    Tecnologías
+                    Tecnologías que
+                    <span>conecto.</span>
                 </h2>
+
+                <p>
+                    Herramientas que utilizo para construir soluciones
+                    desde el software hasta la infraestructura que
+                    las mantiene funcionando.
+                </p>
 
             </div>
 
         </div>
 
 
-        <div class="tech-grid">
+        <!-- GRID -->
+
+        <div class="tech-showcase">
 
 
-            <article class="tech-card">
+            <!-- DESARROLLO -->
 
-                <span class="material-symbols-outlined">
-                    code
-                </span>
+            <article class="tech-item tech-development">
 
-                <h3>
-                    Desarrollo
-                </h3>
+                <div class="tech-item-top">
 
-                <div class="tags">
+                    <span class="tech-index">
+                        01
+                    </span>
 
+                    <span class="material-symbols-outlined">
+                        code
+                    </span>
+
+                </div>
+
+
+                <div class="tech-item-content">
+
+                    <span class="tech-category">
+                        DESARROLLO
+                    </span>
+
+                    <h3>
+                        Software
+                    </h3>
+
+                    <p>
+                        Aplicaciones de escritorio, servicios web
+                        y soluciones orientadas a necesidades reales.
+                    </p>
+
+                </div>
+
+
+                <div class="tech-list">
                     <span>C#</span>
-                    <span>.NET</span>
                     <span>ASP.NET Core</span>
                     <span>Python</span>
-                    <span>Java</span>
                     <span>JavaScript</span>
-                    <span>HTML5</span>
-                    <span>CSS3</span>
-
+                    <span>HTML</span>
+                    <span>CSS</span>
                 </div>
 
             </article>
 
 
+            <!-- BASES DE DATOS -->
 
-            <article class="tech-card">
+            <article class="tech-item tech-database">
 
-                <span class="material-symbols-outlined">
-                    database
-                </span>
+                <div class="tech-item-top">
 
-                <h3>
-                    Bases de Datos
-                </h3>
+                    <span class="tech-index">
+                        02
+                    </span>
 
-                <div class="tags">
+                    <span class="material-symbols-outlined">
+                        database
+                    </span>
 
+                </div>
+
+
+                <div class="tech-item-content">
+
+                    <span class="tech-category">
+                        DATOS
+                    </span>
+
+                    <h3>
+                        Bases de datos
+                    </h3>
+
+                    <p>
+                        Diseño, consulta y administración de información
+                        para aplicaciones y sistemas.
+                    </p>
+
+                </div>
+
+
+                <div class="tech-list">
                     <span>SQL Server</span>
                     <span>MySQL</span>
-                    <span>Oracle</span>
-                    <span>SQL</span>
-
+                    <span>SQLite</span>
+                    <span>Stored Procedures</span>
                 </div>
 
             </article>
 
 
+            <!-- INFRAESTRUCTURA -->
 
-            <article class="tech-card">
+            <article class="tech-item tech-infrastructure">
 
-                <span class="material-symbols-outlined">
-                    lan
-                </span>
+                <div class="tech-item-top">
 
-                <h3>
-                    Infraestructura
-                </h3>
+                    <span class="tech-index">
+                        03
+                    </span>
 
-                <div class="tags">
+                    <span class="material-symbols-outlined">
+                        lan
+                    </span>
 
+                </div>
+
+
+                <div class="tech-item-content">
+
+                    <span class="tech-category">
+                        INFRAESTRUCTURA
+                    </span>
+
+                    <h3>
+                        Redes & sistemas
+                    </h3>
+
+                    <p>
+                        Implementación y configuración de redes,
+                        servicios locales y comunicación entre equipos.
+                    </p>
+
+                </div>
+
+
+                <div class="tech-list">
                     <span>TCP/IP</span>
                     <span>LAN</span>
-                    <span>WLAN</span>
-                    <span>Routers</span>
                     <span>Wi-Fi</span>
-                    <span>Firewall</span>
-                    <span>Servidores</span>
-
+                    <span>Routers</span>
+                    <span>Windows</span>
                 </div>
 
             </article>
 
 
+            <!-- CLOUD -->
 
-            <article class="tech-card">
+            <article class="tech-item tech-cloud">
 
-                <span class="material-symbols-outlined">
-                    settings_suggest
-                </span>
+                <div class="tech-item-top">
 
-                <h3>
-                    Automatización
-                </h3>
+                    <span class="tech-index">
+                        04
+                    </span>
 
-                <div class="tags">
-
-                    <span>Vosk</span>
-                    <span>OBS Studio</span>
-                    <span>Streamer.bot</span>
-                    <span>WebSocket</span>
-                    <span>REST API</span>
+                    <span class="material-symbols-outlined">
+                        cloud
+                    </span>
 
                 </div>
 
-            </article>
+
+                <div class="tech-item-content">
+
+                    <span class="tech-category">
+                        WEB & CLOUD
+                    </span>
+
+                    <h3>
+                        Servicios
+                    </h3>
+
+                    <p>
+                        Publicación de servicios, APIs y aplicaciones
+                        accesibles dentro y fuera de redes locales.
+                    </p>
+
+                </div>
 
 
-
-            <article class="tech-card">
-
-                <span class="material-symbols-outlined">
-                    cloud
-                </span>
-
-                <h3>
-                    Web y Cloud
-                </h3>
-
-                <div class="tags">
-
+                <div class="tech-list">
                     <span>Cloudflare</span>
-                    <span>Kestrel</span>
+                    <span>REST APIs</span>
                     <span>HTTP</span>
-                    <span>JSON</span>
-                    <span>GitHub Pages</span>
-
+                    <span>Kestrel</span>
                 </div>
 
             </article>
 
 
+            <!-- AUTOMATIZACIÓN -->
 
-            <article class="tech-card">
+            <article class="tech-item tech-automation">
 
-                <span class="material-symbols-outlined">
-                    build
-                </span>
+                <div class="tech-item-top">
 
-                <h3>
-                    Herramientas
-                </h3>
+                    <span class="tech-index">
+                        05
+                    </span>
 
-                <div class="tags">
+                    <span class="material-symbols-outlined">
+                        settings_suggest
+                    </span>
 
+                </div>
+
+
+                <div class="tech-item-content">
+
+                    <span class="tech-category">
+                        AUTOMATIZACIÓN
+                    </span>
+
+                    <h3>
+                        Integraciones
+                    </h3>
+
+                    <p>
+                        Automatización de procesos e integración
+                        entre aplicaciones, dispositivos y servicios.
+                    </p>
+
+                </div>
+
+
+                <div class="tech-list">
+                    <span>Python</span>
+                    <span>HTTP APIs</span>
+                    <span>OBS WebSocket</span>
+                    <span>Streamer.bot</span>
+                </div>
+
+            </article>
+
+
+            <!-- HERRAMIENTAS -->
+
+            <article class="tech-item tech-tools">
+
+                <div class="tech-item-top">
+
+                    <span class="tech-index">
+                        06
+                    </span>
+
+                    <span class="material-symbols-outlined">
+                        build
+                    </span>
+
+                </div>
+
+
+                <div class="tech-item-content">
+
+                    <span class="tech-category">
+                        HERRAMIENTAS
+                    </span>
+
+                    <h3>
+                        Entorno de trabajo
+                    </h3>
+
+                    <p>
+                        Herramientas utilizadas para desarrollar,
+                        versionar, probar y distribuir proyectos.
+                    </p>
+
+                </div>
+
+
+                <div class="tech-list">
                     <span>Git</span>
                     <span>GitHub</span>
                     <span>Visual Studio</span>
                     <span>VS Code</span>
-                    <span>LibreOffice</span>
-
                 </div>
 
             </article>
 
+
         </div>
+
+
+        <!-- CIERRE -->
+
+        <div class="tech-footer">
+
+            <p>
+                Mi stack cambia según el problema.
+                <strong>
+                    La herramienta es el medio, no el objetivo.
+                </strong>
+            </p>
+
+            <span>
+                06 ÁREAS
+            </span>
+
+        </div>
+
 
     </div>
 
 </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -644,132 +1046,269 @@
 ========================================================== -->
 
 <section
-    class="section"
+    class="section experience-section"
     id="experiencia"
 >
 
     <div class="container">
 
-        <div class="section-heading">
 
-            <span>
+        <!-- CABECERA -->
+
+        <div class="experience-heading">
+
+            <div class="experience-heading-number">
                 03
-            </span>
+            </div>
 
-            <div>
+            <div class="experience-heading-content">
 
-                <small>
+                <span class="experience-kicker">
                     TRAYECTORIA
-                </small>
+                </span>
 
                 <h2>
-                    Experiencia
+                    Experiencia que
+                    <span>construye.</span>
                 </h2>
+
+                <p>
+                    Experiencia práctica entre desarrollo,
+                    infraestructura, operaciones y modernización
+                    tecnológica.
+                </p>
 
             </div>
 
         </div>
 
 
-        <div class="timeline">
+        <!-- EXPERIENCIAS -->
+
+        <div class="experience-list">
 
 
-            <article class="timeline-item">
+            <!-- EXPERIENCIA 01 -->
 
-                <div class="timeline-date">
-                    2023 — Actualidad
+            <article class="experience-item experience-current">
+
+                <div class="experience-date">
+
+                    <span class="experience-year">
+                        2023
+                    </span>
+
+                    <span class="experience-period">
+                        ACTUALIDAD
+                    </span>
+
                 </div>
 
-                <div class="timeline-content">
 
-                    <h3>
-                        Iglesia de Cristo Judá Maranatha
-                    </h3>
+                <div class="experience-body">
 
-                    <h4>
-                        Desarrollo de Software,
-                        Soporte Técnico e Infraestructura TI
-                    </h4>
+                    <div class="experience-company">
 
-                    <p>
+                        <span class="experience-status">
+                            <i></i>
+                            ACTUAL
+                        </span>
 
-                        Desarrollo e implementación de soluciones
-                        para producción multimedia, servidores,
-                        automatización, redes y herramientas
-                        internas.
+                        <h3>
+                            Iglesia de Cristo Judá Maranatha
+                        </h3>
 
-                    </p>
+                    </div>
+
+
+                    <div class="experience-details">
+
+                        <h4>
+                            Desarrollo de Software,
+                            Soporte Técnico e Infraestructura TI
+                        </h4>
+
+                        <p>
+                            Desarrollo e implementación de soluciones
+                            para producción multimedia, servidores,
+                            automatización, redes y herramientas
+                            internas.
+                        </p>
+
+
+                        <div class="experience-tags">
+
+                            <span>Software</span>
+                            <span>Infraestructura</span>
+                            <span>Redes</span>
+                            <span>Automatización</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- EXPERIENCIA 02 -->
+
+            <article class="experience-item experience-operations">
+
+                <div class="experience-date">
+
+                    <span class="experience-year">
+                        2023
+                    </span>
+
+                    <span class="experience-period">
+                        2025
+                    </span>
+
+                </div>
+
+
+                <div class="experience-body">
+
+                    <div class="experience-company">
+
+                        <span class="experience-type">
+                            OPERACIONES
+                        </span>
+
+                        <h3>
+                            CERSA
+                        </h3>
+
+                    </div>
+
+
+                    <div class="experience-details">
+
+                        <h4>
+                            Analista de Inventarios /
+                            Encargado de Pago a Proveedores
+                        </h4>
+
+                        <p>
+                            Gestión de inventarios y proveedores,
+                            soporte técnico interno y apoyo en
+                            continuidad operativa de sistemas.
+                        </p>
+
+
+                        <div class="experience-tags">
+
+                            <span>Inventarios</span>
+                            <span>Proveedores</span>
+                            <span>Soporte TI</span>
+                            <span>Operaciones</span>
+
+                        </div>
+
+                    </div>
 
                 </div>
 
             </article>
 
 
+            <!-- EXPERIENCIA 03 -->
 
-            <article class="timeline-item">
+            <article class="experience-item experience-modernization">
 
-                <div class="timeline-date">
-                    2023 — 2025
+                <div class="experience-date">
+
+                    <span class="experience-year">
+                        2026
+                    </span>
+
+                    <span class="experience-period">
+                        PROYECTO
+                    </span>
+
                 </div>
 
-                <div class="timeline-content">
 
-                    <h3>
-                        CERSA
-                    </h3>
+                <div class="experience-body">
 
-                    <h4>
-                        Analista de Inventarios /
-                        Encargado de Pago a Proveedores
-                    </h4>
+                    <div class="experience-company">
 
-                    <p>
+                        <span class="experience-type">
+                            MODERNIZACIÓN
+                        </span>
 
-                        Gestión de inventarios y proveedores,
-                        soporte técnico interno y apoyo en
-                        continuidad operativa de sistemas.
+                        <h3>
+                            Miscelánea Win
+                        </h3>
 
-                    </p>
+                    </div>
+
+
+                    <div class="experience-details">
+
+                        <h4>
+                            Modernización Tecnológica
+                        </h4>
+
+                        <p>
+                            Integración de equipos en red,
+                            configuración de dispositivos compartidos
+                            y optimización de procesos internos.
+                        </p>
+
+
+                        <div class="experience-tags">
+
+                            <span>Redes</span>
+                            <span>Hardware</span>
+                            <span>Windows</span>
+                            <span>Optimización</span>
+
+                        </div>
+
+                    </div>
 
                 </div>
 
             </article>
 
-
-
-            <article class="timeline-item">
-
-                <div class="timeline-date">
-                    2026
-                </div>
-
-                <div class="timeline-content">
-
-                    <h3>
-                        Miscelánea Win
-                    </h3>
-
-                    <h4>
-                        Modernización Tecnológica
-                    </h4>
-
-                    <p>
-
-                        Integración de equipos en red,
-                        configuración de dispositivos compartidos
-                        y optimización de procesos internos.
-
-                    </p>
-
-                </div>
-
-            </article>
 
         </div>
+
+
+        <!-- CIERRE -->
+
+        <div class="experience-footer">
+
+            <span>
+                2023 — PRESENTE
+            </span>
+
+            <p>
+                Desarrollo técnico con experiencia
+                <strong>
+                    dentro y fuera del código.
+                </strong>
+            </p>
+
+        </div>
+
 
     </div>
 
 </section>
+
+
+
+
+
+
+
+
+
+
 
 
 <!-- =========================================================
@@ -777,364 +1316,430 @@
 ========================================================== -->
 
 <section
-    class="section section-alt"
+    class="section projects-section"
     id="proyectos"
 >
 
     <div class="container">
 
-        <div class="section-heading">
 
-            <span>
+        <!-- CABECERA -->
+
+        <div class="projects-heading">
+
+            <div class="projects-heading-number">
                 04
-            </span>
+            </div>
 
-            <div>
+            <div class="projects-heading-content">
 
-                <small>
-                    DESARROLLO
-                </small>
+                <span class="projects-kicker">
+                    TRABAJO SELECCIONADO
+                </span>
 
                 <h2>
-                    Proyectos destacados
+                    Proyectos que
+                    <span>resuelven.</span>
                 </h2>
+
+                <p>
+                    Software, infraestructura y automatización
+                    convertidos en soluciones funcionales.
+                </p>
 
             </div>
 
         </div>
 
 
-        <div class="projects-grid">
 
+        <!-- =================================================
+             PROYECTO PRINCIPAL
+        ================================================== -->
 
-            <!-- =================================================
-                 CONTROL PERSONAL
-            ================================================== -->
+        <article class="project-main">
 
-            <article class="project-card project-featured">
+            <div class="project-main-top">
 
-                <div class="project-top">
+                <div class="project-main-label">
 
-                    <span class="project-number">
+                    <span class="project-main-number">
                         01
                     </span>
 
-                    <span class="material-symbols-outlined">
-                        monitoring
+                    <span>
+                        PROYECTO PRINCIPAL
                     </span>
 
                 </div>
 
 
-                <span class="project-label">
-                    PROYECTO DESTACADO
+                <span class="material-symbols-outlined project-main-icon">
+                    monitoring
                 </span>
 
-
-                <h3>
-                    Control Personal
-                </h3>
+            </div>
 
 
-                <p>
-                    Aplicación de productividad desarrollada para
-                    planificar actividades, controlar tiempos,
-                    registrar hábitos y metas, analizar el progreso
-                    y detectar automáticamente actividad e inactividad.
-                </p>
+            <div class="project-main-grid">
 
 
-                <div class="project-tags">
+                <!-- INFORMACIÓN -->
 
-                    <span>Python</span>
-                    <span>Flask</span>
-                    <span>SQLite</span>
-                    <span>OpenCV</span>
-                    <span>MediaPipe</span>
-                    <span>Kotlin</span>
-                    <span>REST API</span>
+                <div class="project-main-info">
 
-                </div>
-
-
-                <ul>
-
-                    <li>
-                        Seguimiento de actividades mediante temporizadores.
-                    </li>
-
-                    <li>
-                        Gestión de hábitos, metas y progreso.
-                    </li>
-
-                    <li>
-                        Detección de actividad e inactividad en Windows.
-                    </li>
-
-                    <li>
-                        Detección de aplicaciones y sitios distractores.
-                    </li>
-
-                    <li>
-                        Monitoreo de concentración mediante visión por computadora.
-                    </li>
-
-                    <li>
-                        Detección y conteo de flexiones mediante OpenCV y MediaPipe.
-                    </li>
-
-                    <li>
-                        Integración con Android mediante API HTTP local.
-                    </li>
-
-                    <li>
-                        Distribución para Windows mediante PyInstaller e Inno Setup.
-                    </li>
-
-                </ul>
-
-
-                <div class="project-actions">
-
-                    <a
-                        href="https://github.com/LordFix410/Control-Personal"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="btn btn-primary"
-                    >
-
-                        <span class="material-symbols-outlined">
-                            code
-                        </span>
-
-                        Ver código
-
-                    </a>
-
-
-                    <a
-                        href="https://github.com/LordFix410/Control-Personal/releases/latest"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="btn btn-secondary"
-                    >
-
-                        <span class="material-symbols-outlined">
-                            download
-                        </span>
-
-                        Descargar
-
-                    </a>
-
-                </div>
-
-            </article>
-
-
-
-            <!-- =================================================
-                 SERVIDOR MULTIMEDIA
-            ================================================== -->
-
-            <article class="project-card">
-
-                <div class="project-top">
-
-                    <span class="project-number">
-                        02
+                    <span class="project-category">
+                        PRODUCTIVIDAD · AUTOMATIZACIÓN · COMPUTER VISION
                     </span>
+
+                    <h3>
+                        Control
+                        <span>Personal.</span>
+                    </h3>
+
+                    <p class="project-main-description">
+                        Aplicación de productividad diseñada para
+                        planificar actividades, controlar tiempos,
+                        registrar hábitos y metas, analizar progreso
+                        y detectar automáticamente la actividad
+                        del usuario.
+                    </p>
+
+
+                    <div class="project-tech-line">
+
+                        <span>Python</span>
+                        <span>Flask</span>
+                        <span>SQLite</span>
+                        <span>OpenCV</span>
+                        <span>MediaPipe</span>
+                        <span>Kotlin</span>
+
+                    </div>
+
+
+                    <div class="project-main-actions">
+
+                        <a
+                            href="https://github.com/LordFix410/Control-Personal"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="project-link project-link-primary"
+                        >
+
+                            Ver proyecto
+
+                            <span class="material-symbols-outlined">
+                                arrow_outward
+                            </span>
+
+                        </a>
+
+
+                        <a
+                            href="https://github.com/LordFix410/Control-Personal/releases/latest"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="project-link"
+                        >
+
+                            Descargar
+
+                            <span class="material-symbols-outlined">
+                                download
+                            </span>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CAPACIDADES -->
+
+                <div class="project-main-features">
+
+                    <div class="project-feature">
+
+                        <span>
+                            01
+                        </span>
+
+                        <p>
+                            Planificación, temporizadores,
+                            hábitos y seguimiento de metas.
+                        </p>
+
+                    </div>
+
+
+                    <div class="project-feature">
+
+                        <span>
+                            02
+                        </span>
+
+                        <p>
+                            Detección automática de actividad,
+                            inactividad y aplicaciones distractoras.
+                        </p>
+
+                    </div>
+
+
+                    <div class="project-feature">
+
+                        <span>
+                            03
+                        </span>
+
+                        <p>
+                            Monitoreo de concentración mediante
+                            visión por computadora.
+                        </p>
+
+                    </div>
+
+
+                    <div class="project-feature">
+
+                        <span>
+                            04
+                        </span>
+
+                        <p>
+                            Detección y conteo de flexiones
+                            con OpenCV y MediaPipe.
+                        </p>
+
+                    </div>
+
+
+                    <div class="project-feature">
+
+                        <span>
+                            05
+                        </span>
+
+                        <p>
+                            Integración con Android mediante
+                            API HTTP local.
+                        </p>
+
+                    </div>
+
+
+                    <div class="project-feature">
+
+                        <span>
+                            06
+                        </span>
+
+                        <p>
+                            Aplicación distribuible para Windows
+                            mediante instalador.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =================================================
+             OTROS PROYECTOS
+        ================================================== -->
+
+        <div class="projects-subheading">
+
+            <span>
+                MÁS TRABAJO
+            </span>
+
+            <p>
+                Sistemas, herramientas e integraciones.
+            </p>
+
+        </div>
+
+
+
+        <div class="projects-list">
+
+
+            <!-- MULTIMEDIA -->
+
+            <article class="project-row project-multimedia">
+
+                <div class="project-row-number">
+                    02
+                </div>
+
+
+                <div class="project-row-title">
+
+                    <span>
+                        WEB · INFRAESTRUCTURA
+                    </span>
+
+                    <h3>
+                        Plataforma
+                        Multimedia
+                    </h3>
+
+                </div>
+
+
+                <div class="project-row-content">
+
+                    <p>
+                        Servidor web para almacenar, organizar
+                        y distribuir videos, presentaciones y
+                        contenido multimedia mediante LAN y
+                        acceso remoto.
+                    </p>
+
+
+                    <div class="project-tech-line">
+                        <span>C#</span>
+                        <span>ASP.NET Core</span>
+                        <span>Kestrel</span>
+                        <span>Cloudflare</span>
+                        <span>HTTP</span>
+                    </div>
+
+                </div>
+
+
+                <a
+                    href="https://servidor-videos.abdielcarcuz.workers.dev/HTML/index.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-row-action"
+                    aria-label="Abrir Plataforma Multimedia"
+                >
 
                     <span class="material-symbols-outlined">
-                        dns
+                        arrow_outward
                     </span>
 
-                </div>
-
-
-                <h3>
-                    Plataforma Multimedia
-                </h3>
-
-
-                <p>
-                    Servidor web para almacenar, organizar y
-                    distribuir videos, presentaciones y contenido
-                    multimedia tanto dentro de una red local como
-                    mediante acceso remoto.
-                </p>
-
-
-                <div class="project-tags">
-
-                    <span>C#</span>
-                    <span>ASP.NET Core</span>
-                    <span>Kestrel</span>
-                    <span>JavaScript</span>
-                    <span>HTTP</span>
-                    <span>Cloudflare</span>
-
-                </div>
-
-
-                <ul>
-
-                    <li>
-                        Streaming mediante HTTP Range Requests.
-                    </li>
-
-                    <li>
-                        API para videos y presentaciones.
-                    </li>
-
-                    <li>
-                        Conversión de PowerPoint para visualización web.
-                    </li>
-
-                    <li>
-                        Acceso mediante LAN y Cloudflare Tunnel.
-                    </li>
-
-                    <li>
-                        Cloudflare Workers para disponer de un punto de acceso estable.
-                    </li>
-
-                    <li>
-                        Interfaz responsive para computadora y dispositivos móviles.
-                    </li>
-
-                </ul>
-
-
-                <div class="project-actions">
-
-                    <a
-                        href="https://servidor-videos.abdielcarcuz.workers.dev/HTML/index.html"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="btn btn-secondary"
-                    >
-
-                        <span class="material-symbols-outlined">
-                            open_in_new
-                        </span>
-
-                        Ver demo
-
-                    </a>
-
-                </div>
+                </a>
 
             </article>
 
 
 
-            <!-- =================================================
-                 PLATAFORMA DE MÚSICA
-            ================================================== -->
+            <!-- MÚSICA -->
 
-            <article class="project-card">
+            <article class="project-row project-music">
 
-                <div class="project-top">
+                <div class="project-row-number">
+                    03
+                </div>
 
-                    <span class="project-number">
-                        03
+
+                <div class="project-row-title">
+
+                    <span>
+                        WEB · MULTIMEDIA
                     </span>
+
+                    <h3>
+                        Plataforma
+                        de Música
+                    </h3>
+
+                </div>
+
+
+                <div class="project-row-content">
+
+                    <p>
+                        Aplicación web para administrar y reproducir
+                        una biblioteca musical, crear playlists y
+                        controlar el orden de reproducción desde
+                        diferentes dispositivos.
+                    </p>
+
+
+                    <div class="project-tech-line">
+                        <span>JavaScript</span>
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>API</span>
+                    </div>
+
+                </div>
+
+
+                <a
+                    href="https://servidor-videos.abdielcarcuz.workers.dev/HTML/Musica.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-row-action"
+                    aria-label="Abrir Plataforma de Música"
+                >
 
                     <span class="material-symbols-outlined">
-                        library_music
+                        arrow_outward
                     </span>
 
-                </div>
-
-
-                <h3>
-                    Plataforma de Música
-                </h3>
-
-
-                <p>
-                    Aplicación web para administrar y reproducir
-                    una biblioteca musical desde diferentes
-                    dispositivos mediante una interfaz responsive
-                    conectada al servidor multimedia.
-                </p>
-
-
-                <div class="project-tags">
-
-                    <span>JavaScript</span>
-                    <span>HTML5</span>
-                    <span>CSS3</span>
-                    <span>API</span>
-                    <span>Multimedia</span>
-
-                </div>
-
-
-                <ul>
-
-                    <li>
-                        Biblioteca y búsqueda de canciones.
-                    </li>
-
-                    <li>
-                        Creación y administración de playlists.
-                    </li>
-
-                    <li>
-                        Orden personalizado de reproducción.
-                    </li>
-
-                    <li>
-                        Reproducción continua de contenido.
-                    </li>
-
-                    <li>
-                        Transiciones progresivas entre canciones.
-                    </li>
-
-                    <li>
-                        Interfaz adaptada para computadora y dispositivos móviles.
-                    </li>
-
-                </ul>
-
-
-                <div class="project-actions">
-
-                    <a
-                        href="https://servidor-videos.abdielcarcuz.workers.dev/HTML/Musica.html"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="btn btn-secondary"
-                    >
-
-                        <span class="material-symbols-outlined">
-                            open_in_new
-                        </span>
-
-                        Ver demo
-
-                    </a>
-
-                </div>
+                </a>
 
             </article>
 
 
 
-            <!-- =================================================
-                 BIBLIA VOZ
-            ================================================== -->
+            <!-- VOZ OFFLINE -->
 
-            <article class="project-card">
+            <article class="project-row project-voice">
 
-                <div class="project-top">
+                <div class="project-row-number">
+                    04
+                </div>
 
-                    <span class="project-number">
-                        04
+
+                <div class="project-row-title">
+
+                    <span>
+                        VOZ · AUTOMATIZACIÓN
                     </span>
+
+                    <h3>
+                        Reconocimiento
+                        de Voz Offline
+                    </h3>
+
+                </div>
+
+
+                <div class="project-row-content">
+
+                    <p>
+                        Sistema local de reconocimiento de voz
+                        capaz de interpretar referencias estructuradas
+                        y automatizar búsquedas dentro de aplicaciones
+                        de escritorio.
+                    </p>
+
+
+                    <div class="project-tech-line">
+                        <span>Python</span>
+                        <span>Vosk</span>
+                        <span>STT</span>
+                        <span>Lexer</span>
+                        <span>Parser</span>
+                    </div>
+
+                </div>
+
+
+                <div class="project-row-symbol">
 
                     <span class="material-symbols-outlined">
                         mic
@@ -1142,65 +1747,54 @@
 
                 </div>
 
-
-                <h3>
-                    Reconocimiento de Voz Offline
-                </h3>
-
-
-                <p>
-                    Sistema de reconocimiento de voz ejecutado
-                    localmente para interpretar referencias
-                    estructuradas y automatizar su búsqueda
-                    dentro de una aplicación de escritorio.
-                </p>
-
-
-                <div class="project-tags">
-
-                    <span>Python</span>
-                    <span>Vosk</span>
-                    <span>STT</span>
-                    <span>Automatización</span>
-
-                </div>
-
-
-                <ul>
-
-                    <li>
-                        Reconocimiento de voz completamente offline.
-                    </li>
-
-                    <li>
-                        Normalización e interpretación del lenguaje hablado.
-                    </li>
-
-                    <li>
-                        Procesamiento de referencias mediante lexer y parser.
-                    </li>
-
-                    <li>
-                        Automatización de aplicaciones de escritorio.
-                    </li>
-
-                </ul>
-
             </article>
 
 
 
-            <!-- =================================================
-                 AUTOMATIZACIÓN OBS
-            ================================================== -->
+            <!-- AUTOMATIZACIÓN -->
 
-            <article class="project-card">
+            <article class="project-row project-obs">
 
-                <div class="project-top">
+                <div class="project-row-number">
+                    05
+                </div>
 
-                    <span class="project-number">
-                        05
+
+                <div class="project-row-title">
+
+                    <span>
+                        AUTOMATIZACIÓN · REAL TIME
                     </span>
+
+                    <h3>
+                        Producción
+                        Multimedia
+                    </h3>
+
+                </div>
+
+
+                <div class="project-row-content">
+
+                    <p>
+                        Ecosistema de paneles web y automatizaciones
+                        para controlar cámaras, escenas, overlays
+                        y elementos audiovisuales en tiempo real.
+                    </p>
+
+
+                    <div class="project-tech-line">
+                        <span>OBS Studio</span>
+                        <span>Streamer.bot</span>
+                        <span>HTTP</span>
+                        <span>WebSocket</span>
+                        <span>JavaScript</span>
+                    </div>
+
+                </div>
+
+
+                <div class="project-row-symbol">
 
                     <span class="material-symbols-outlined">
                         videocam
@@ -1208,161 +1802,127 @@
 
                 </div>
 
-
-                <h3>
-                    Automatización de Producción Multimedia
-                </h3>
-
-
-                <p>
-                    Ecosistema de paneles web y automatizaciones
-                    para controlar cámaras, escenas, overlays y
-                    diferentes elementos de una producción audiovisual
-                    en tiempo real.
-                </p>
-
-
-                <div class="project-tags">
-
-                    <span>OBS Studio</span>
-                    <span>Streamer.bot</span>
-                    <span>HTTP</span>
-                    <span>WebSocket</span>
-                    <span>JavaScript</span>
-
-                </div>
-
-
-                <ul>
-
-                    <li>
-                        Panel web personalizado para control de escenas.
-                    </li>
-
-                    <li>
-                        Comunicación con OBS mediante WebSocket.
-                    </li>
-
-                    <li>
-                        Ejecución de acciones mediante HTTP.
-                    </li>
-
-                    <li>
-                        Overlays HTML personalizados.
-                    </li>
-
-                    <li>
-                        Automatización de elementos audiovisuales.
-                    </li>
-
-                </ul>
-
             </article>
 
 
 
-            <!-- =================================================
-                 SISTEMA DE VENTAS
-            ================================================== -->
+            <!-- SISTEMA DE VENTAS -->
 
-            <article class="project-card">
+            <article class="project-row project-sales">
 
-                <div class="project-top">
+                <div class="project-row-number">
+                    06
+                </div>
 
-                    <span class="project-number">
-                        06
+
+                <div class="project-row-title">
+
+                    <span>
+                        DESKTOP · DATABASE
                     </span>
+
+                    <h3>
+                        Sistema
+                        de Ventas
+                    </h3>
+
+                </div>
+
+
+                <div class="project-row-content">
+
+                    <p>
+                        Aplicación de escritorio para administrar
+                        clientes, productos, inventario y operaciones
+                        de venta mediante una base de datos relacional.
+                    </p>
+
+
+                    <div class="project-tech-line">
+                        <span>C#</span>
+                        <span>.NET</span>
+                        <span>SQL Server</span>
+                    </div>
+
+
+                    <div class="project-inline-links">
+
+                        <a
+                            href="https://github.com/LordFix410/Sistema_de_Ventas"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Código
+                        </a>
+
+                        <a
+                            href="https://github.com/LordFix410/Sistema_de_Ventas/releases/download/v1.0.0/InstaladorSistemaVentas.exe"
+                        >
+                            Descargar
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <a
+                    href="https://github.com/LordFix410/Sistema_de_Ventas"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-row-action"
+                    aria-label="Abrir Sistema de Ventas"
+                >
 
                     <span class="material-symbols-outlined">
-                        point_of_sale
+                        arrow_outward
                     </span>
 
-                </div>
-
-
-                <h3>
-                    Sistema de Ventas
-                </h3>
-
-
-                <p>
-                    Aplicación de escritorio para la administración
-                    de clientes, productos, inventario y operaciones
-                    de venta mediante una base de datos relacional.
-                </p>
-
-
-                <div class="project-tags">
-
-                    <span>C#</span>
-                    <span>.NET</span>
-                    <span>SQL Server</span>
-
-                </div>
-
-
-                <ul>
-
-                    <li>
-                        Gestión de clientes y productos.
-                    </li>
-
-                    <li>
-                        Control de inventario.
-                    </li>
-
-                    <li>
-                        Registro de operaciones de venta.
-                    </li>
-
-                    <li>
-                        Persistencia mediante SQL Server.
-                    </li>
-
-                </ul>
-
-
-                <div class="project-actions">
-
-                    <a
-                        href="https://github.com/LordFix410/Sistema_de_Ventas"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="btn btn-secondary"
-                    >
-
-                        <span class="material-symbols-outlined">
-                            code
-                        </span>
-
-                        Ver código
-
-                    </a>
-
-
-                    <a
-                        href="https://github.com/LordFix410/Sistema_de_Ventas/releases/download/v1.0.0/InstaladorSistemaVentas.exe"
-                        class="btn btn-primary"
-                    >
-
-                        <span class="material-symbols-outlined">
-                            download
-                        </span>
-
-                        Descargar
-
-                    </a>
-
-                </div>
+                </a>
 
             </article>
 
 
         </div>
 
+
+
+        <!-- CIERRE -->
+
+        <div class="projects-footer">
+
+            <p>
+                Cada proyecto nació de una necesidad concreta:
+                <strong>
+                    diseñar, conectar y hacer funcionar.
+                </strong>
+            </p>
+
+            <a
+                href="https://github.com/LordFix410"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                GitHub
+
+                <span class="material-symbols-outlined">
+                    arrow_outward
+                </span>
+
+            </a>
+
+        </div>
+
+
     </div>
 
 </section>
+
+
+
+<!-- =========================================================
+     FORMACIÓN EN CURSO
+========================================================== -->
 
 <section
     class="section learning-section"
@@ -1371,62 +1931,68 @@
 
     <div class="container">
 
-        <div class="section-heading">
 
-            <span>
+        <!-- CABECERA -->
+
+        <div class="learning-heading">
+
+            <div class="learning-heading-number">
                 06
-            </span>
+            </div>
 
-            <div>
 
-                <small>
+            <div class="learning-heading-content">
+
+                <span class="learning-kicker">
                     APRENDIZAJE CONTINUO
-                </small>
+                </span>
 
                 <h2>
-                    Formación en curso
+                    Siempre
+                    <span>aprendiendo.</span>
                 </h2>
+
+                <p>
+                    Formación complementaria enfocada en desarrollo,
+                    datos, gestión de proyectos y habilidades
+                    profesionales.
+                </p>
 
             </div>
 
         </div>
 
 
-        <div class="learning-intro">
 
-            <div>
+        <!-- INTRO -->
 
-                <span class="learning-badge">
+        <div class="learning-overview">
 
-                    <span class="material-symbols-outlined">
-                        auto_stories
-                    </span>
+            <div class="learning-overview-main">
 
+                <span class="learning-active">
+                    <i></i>
                     FORMACIÓN ACTIVA
-
                 </span>
 
 
                 <h3>
-                    Actualmente sigo ampliando
-                    mi perfil profesional
+                    Construyendo un perfil
+                    <span>multidisciplinario.</span>
                 </h3>
 
 
                 <p>
-
                     Además de mi formación universitaria,
-                    continúo desarrollando conocimientos
-                    en programación, desarrollo web,
-                    análisis de datos, gestión de proyectos,
-                    comunicación y liderazgo.
-
+                    continúo desarrollando conocimientos en
+                    programación, desarrollo web, análisis de datos,
+                    gestión de proyectos, comunicación y liderazgo.
                 </p>
 
             </div>
 
 
-            <div class="learning-platform">
+            <div class="learning-provider">
 
                 <span class="material-symbols-outlined">
                     school
@@ -1435,7 +2001,7 @@
                 <div>
 
                     <small>
-                        PLATAFORMA DE FORMACIÓN
+                        PLATAFORMA
                     </small>
 
                     <strong>
@@ -1443,7 +2009,7 @@
                     </strong>
 
                     <span>
-                        Progreso actualmente registrado
+                        Formación actualmente registrada
                     </span>
 
                 </div>
@@ -1455,76 +2021,68 @@
 
 
         <!-- =================================================
-             TARJETAS DE FORMACIÓN
+             CURSOS
         ================================================== -->
 
-        <div class="learning-grid">
+        <div class="learning-list">
 
 
-            <!-- =============================================
-                 FULL STACK
-            ============================================== -->
+            <!-- FULL STACK -->
 
             <article
-                class="learning-card"
+                class="learning-row learning-fullstack"
                 data-progress="76"
             >
 
-                <div class="learning-card-top">
+                <div class="learning-row-number">
+                    01
+                </div>
 
-                    <div class="learning-icon">
 
-                        <span class="material-symbols-outlined">
-                            developer_mode
+                <div class="learning-row-info">
+
+                    <span>
+                        DESARROLLO
+                    </span>
+
+                    <h3>
+                        Desarrollador Full Stack
+                    </h3>
+
+                    <p>
+                        Ruta de formación en desarrollo
+                        de aplicaciones y tecnologías web.
+                    </p>
+
+                </div>
+
+
+                <div class="learning-progress">
+
+                    <div class="learning-progress-top">
+
+                        <span>
+                            PROGRESO
                         </span>
+
+                        <strong>
+                            76%
+                        </strong>
 
                     </div>
 
 
-                    <span class="learning-status">
-                        EN CURSO
-                    </span>
-
-                </div>
-
-
-                <h3>
-                    Desarrollador Full Stack
-                </h3>
-
-
-                <p>
-                    Ruta de formación en desarrollo
-                    de aplicaciones y tecnologías web.
-                </p>
-
-
-                <div class="progress-info">
-
-                    <span>
-                        Avance de formación
-                    </span>
-
-                    <strong>
-                        76%
-                    </strong>
-
-                </div>
-
-
-                <div
-                    class="progress-bar"
-                    role="progressbar"
-                    aria-valuenow="76"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                    aria-label="Progreso Desarrollador Full Stack"
-                >
-
                     <div
-                        class="progress-fill"
-                        style="--progress: 76%;"
-                    ></div>
+                        class="learning-progress-bar"
+                        role="progressbar"
+                        aria-valuenow="76"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                    >
+
+                        <div style="--progress: 76%;"></div>
+
+                    </div>
 
                 </div>
 
@@ -1532,71 +2090,62 @@
 
 
 
-            <!-- =============================================
-                 HTML + CSS
-            ============================================== -->
+            <!-- HTML CSS -->
 
             <article
-                class="learning-card"
+                class="learning-row learning-html"
                 data-progress="84"
             >
 
-                <div class="learning-card-top">
+                <div class="learning-row-number">
+                    02
+                </div>
 
-                    <div class="learning-icon">
 
-                        <span class="material-symbols-outlined">
-                            code_blocks
+                <div class="learning-row-info">
+
+                    <span>
+                        FRONTEND
+                    </span>
+
+                    <h3>
+                        HTML + CSS
+                    </h3>
+
+                    <p>
+                        Formación en estructura,
+                        diseño y desarrollo de interfaces web.
+                    </p>
+
+                </div>
+
+
+                <div class="learning-progress">
+
+                    <div class="learning-progress-top">
+
+                        <span>
+                            PROGRESO
                         </span>
+
+                        <strong>
+                            84%
+                        </strong>
 
                     </div>
 
 
-                    <span class="learning-status">
-                        EN CURSO
-                    </span>
-
-                </div>
-
-
-                <h3>
-                    HTML + CSS
-                </h3>
-
-
-                <p>
-                    Formación en estructura,
-                    diseño y desarrollo de
-                    interfaces web.
-                </p>
-
-
-                <div class="progress-info">
-
-                    <span>
-                        Avance del curso
-                    </span>
-
-                    <strong>
-                        84%
-                    </strong>
-
-                </div>
-
-
-                <div
-                    class="progress-bar"
-                    role="progressbar"
-                    aria-valuenow="84"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                    aria-label="Progreso HTML y CSS"
-                >
-
                     <div
-                        class="progress-fill"
-                        style="--progress: 84%;"
-                    ></div>
+                        class="learning-progress-bar"
+                        role="progressbar"
+                        aria-valuenow="84"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                    >
+
+                        <div style="--progress: 84%;"></div>
+
+                    </div>
 
                 </div>
 
@@ -1604,71 +2153,62 @@
 
 
 
-            <!-- =============================================
-                 JAVASCRIPT
-            ============================================== -->
+            <!-- JAVASCRIPT -->
 
             <article
-                class="learning-card"
+                class="learning-row learning-js"
                 data-progress="71"
             >
 
-                <div class="learning-card-top">
+                <div class="learning-row-number">
+                    03
+                </div>
 
-                    <div class="learning-icon">
 
-                        <span class="material-symbols-outlined">
-                            javascript
+                <div class="learning-row-info">
+
+                    <span>
+                        PROGRAMACIÓN
+                    </span>
+
+                    <h3>
+                        JavaScript
+                    </h3>
+
+                    <p>
+                        Formación orientada a Ingeniería de Software
+                        y desarrollo con JavaScript.
+                    </p>
+
+                </div>
+
+
+                <div class="learning-progress">
+
+                    <div class="learning-progress-top">
+
+                        <span>
+                            PROGRESO
                         </span>
+
+                        <strong>
+                            71%
+                        </strong>
 
                     </div>
 
 
-                    <span class="learning-status">
-                        EN CURSO
-                    </span>
-
-                </div>
-
-
-                <h3>
-                    JavaScript
-                </h3>
-
-
-                <p>
-                    Formación orientada a
-                    Ingeniería de Software
-                    y desarrollo con JavaScript.
-                </p>
-
-
-                <div class="progress-info">
-
-                    <span>
-                        Avance del curso
-                    </span>
-
-                    <strong>
-                        71%
-                    </strong>
-
-                </div>
-
-
-                <div
-                    class="progress-bar"
-                    role="progressbar"
-                    aria-valuenow="71"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                    aria-label="Progreso JavaScript"
-                >
-
                     <div
-                        class="progress-fill"
-                        style="--progress: 71%;"
-                    ></div>
+                        class="learning-progress-bar"
+                        role="progressbar"
+                        aria-valuenow="71"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                    >
+
+                        <div style="--progress: 71%;"></div>
+
+                    </div>
 
                 </div>
 
@@ -1676,70 +2216,62 @@
 
 
 
-            <!-- =============================================
-                 COMUNICACIÓN Y LIDERAZGO
-            ============================================== -->
+            <!-- COMUNICACIÓN -->
 
             <article
-                class="learning-card"
+                class="learning-row learning-leadership"
                 data-progress="57"
             >
 
-                <div class="learning-card-top">
+                <div class="learning-row-number">
+                    04
+                </div>
 
-                    <div class="learning-icon">
 
-                        <span class="material-symbols-outlined">
-                            groups
+                <div class="learning-row-info">
+
+                    <span>
+                        HABILIDADES PROFESIONALES
+                    </span>
+
+                    <h3>
+                        Comunicación y Liderazgo
+                    </h3>
+
+                    <p>
+                        Desarrollo de habilidades blandas,
+                        comunicación efectiva y liderazgo.
+                    </p>
+
+                </div>
+
+
+                <div class="learning-progress">
+
+                    <div class="learning-progress-top">
+
+                        <span>
+                            PROGRESO
                         </span>
+
+                        <strong>
+                            57%
+                        </strong>
 
                     </div>
 
 
-                    <span class="learning-status">
-                        EN CURSO
-                    </span>
-
-                </div>
-
-
-                <h3>
-                    Comunicación y Liderazgo
-                </h3>
-
-
-                <p>
-                    Desarrollo de habilidades blandas,
-                    comunicación efectiva y liderazgo.
-                </p>
-
-
-                <div class="progress-info">
-
-                    <span>
-                        Avance del curso
-                    </span>
-
-                    <strong>
-                        57%
-                    </strong>
-
-                </div>
-
-
-                <div
-                    class="progress-bar"
-                    role="progressbar"
-                    aria-valuenow="57"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                    aria-label="Progreso Comunicación y Liderazgo"
-                >
-
                     <div
-                        class="progress-fill"
-                        style="--progress: 57%;"
-                    ></div>
+                        class="learning-progress-bar"
+                        role="progressbar"
+                        aria-valuenow="57"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                    >
+
+                        <div style="--progress: 57%;"></div>
+
+                    </div>
 
                 </div>
 
@@ -1747,70 +2279,62 @@
 
 
 
-            <!-- =============================================
-                 ANALISTA DE DATOS
-            ============================================== -->
+            <!-- DATOS -->
 
             <article
-                class="learning-card"
+                class="learning-row learning-data"
                 data-progress="45"
             >
 
-                <div class="learning-card-top">
+                <div class="learning-row-number">
+                    05
+                </div>
 
-                    <div class="learning-icon">
 
-                        <span class="material-symbols-outlined">
-                            monitoring
+                <div class="learning-row-info">
+
+                    <span>
+                        DATOS
+                    </span>
+
+                    <h3>
+                        Analista de Datos
+                    </h3>
+
+                    <p>
+                        Ruta de formación en análisis,
+                        interpretación y manejo de datos.
+                    </p>
+
+                </div>
+
+
+                <div class="learning-progress">
+
+                    <div class="learning-progress-top">
+
+                        <span>
+                            PROGRESO
                         </span>
+
+                        <strong>
+                            45%
+                        </strong>
 
                     </div>
 
 
-                    <span class="learning-status">
-                        EN CURSO
-                    </span>
-
-                </div>
-
-
-                <h3>
-                    Analista de Datos
-                </h3>
-
-
-                <p>
-                    Ruta de formación en análisis,
-                    interpretación y manejo de datos.
-                </p>
-
-
-                <div class="progress-info">
-
-                    <span>
-                        Avance de formación
-                    </span>
-
-                    <strong>
-                        45%
-                    </strong>
-
-                </div>
-
-
-                <div
-                    class="progress-bar"
-                    role="progressbar"
-                    aria-valuenow="45"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                    aria-label="Progreso Analista de Datos"
-                >
-
                     <div
-                        class="progress-fill"
-                        style="--progress: 45%;"
-                    ></div>
+                        class="learning-progress-bar"
+                        role="progressbar"
+                        aria-valuenow="45"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                    >
+
+                        <div style="--progress: 45%;"></div>
+
+                    </div>
 
                 </div>
 
@@ -1818,123 +2342,85 @@
 
 
 
-            <!-- =============================================
-                 GESTIÓN DE PROYECTOS
-            ============================================== -->
+            <!-- GESTIÓN -->
 
             <article
-                class="learning-card learning-card-featured"
+                class="learning-row learning-management"
                 data-progress="34"
             >
 
-                <div class="learning-card-top">
-
-                    <div class="learning-icon">
-
-                        <span class="material-symbols-outlined">
-                            account_tree
-                        </span>
-
-                    </div>
-
-
-                    <span class="learning-status">
-                        RUTA EN CURSO
-                    </span>
-
+                <div class="learning-row-number">
+                    06
                 </div>
 
 
-                <h3>
-                    Gestión de Proyectos
-                </h3>
-
-
-                <p>
-                    Ruta compuesta por tres cursos
-                    orientados a la planificación,
-                    organización y gestión de proyectos.
-                </p>
-
-
-                <div class="progress-info">
+                <div class="learning-row-info">
 
                     <span>
-                        Avance de la ruta completa
+                        PROJECT MANAGEMENT
                     </span>
 
-                    <strong>
-                        34%
-                    </strong>
+                    <h3>
+                        Gestión de Proyectos
+                    </h3>
 
-                </div>
-
-
-                <div
-                    class="progress-bar"
-                    role="progressbar"
-                    aria-valuenow="34"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                    aria-label="Progreso ruta Gestión de Proyectos"
-                >
-
-                    <div
-                        class="progress-fill"
-                        style="--progress: 34%;"
-                    ></div>
-
-                </div>
+                    <p>
+                        Ruta compuesta por tres cursos orientados
+                        a planificación, organización y gestión
+                        de proyectos.
+                    </p>
 
 
+                    <!-- SUBCURSO -->
 
-                <!-- =========================================
-                     CURSO INTERNO
-                ========================================== -->
-
-                <div class="subcourse">
-
-                    <div class="subcourse-line">
-
-                        <span class="material-symbols-outlined">
-                            subdirectory_arrow_right
-                        </span>
-
+                    <div class="learning-subcourse">
 
                         <div>
 
                             <small>
-                                CURSO DENTRO DE LA RUTA
+                                CURSO ACTUAL
                             </small>
 
                             <strong>
-                                Fundamentos de Gestión
-                                de Proyectos
+                                Fundamentos de Gestión de Proyectos
                             </strong>
 
                         </div>
 
 
-                        <b>
+                        <span>
                             89%
-                        </b>
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="learning-progress">
+
+                    <div class="learning-progress-top">
+
+                        <span>
+                            RUTA COMPLETA
+                        </span>
+
+                        <strong>
+                            34%
+                        </strong>
 
                     </div>
 
 
                     <div
-                        class="progress-bar progress-bar-small"
+                        class="learning-progress-bar"
                         role="progressbar"
-                        aria-valuenow="89"
+                        aria-valuenow="34"
                         aria-valuemin="0"
                         aria-valuemax="100"
-                        aria-label="Progreso Fundamentos de Gestión de Proyectos"
                     >
 
-                        <div
-                            class="progress-fill"
-                            style="--progress: 89%;"
-                        ></div>
+                        <div style="--progress: 34%;"></div>
 
                     </div>
 
@@ -1942,13 +2428,12 @@
 
             </article>
 
+
         </div>
 
 
 
-        <!-- =================================================
-             ACLARACIÓN
-        ================================================== -->
+        <!-- ACLARACIÓN -->
 
         <div class="learning-note">
 
@@ -1956,9 +2441,7 @@
                 info
             </span>
 
-
             <p>
-
                 Los porcentajes representan el
                 <strong>
                     progreso registrado dentro de cada curso
@@ -1966,10 +2449,10 @@
                 </strong>,
                 no una calificación del nivel de dominio
                 de la tecnología.
-
             </p>
 
         </div>
+
 
     </div>
 
@@ -1978,48 +2461,81 @@
 <!-- =========================================================
      CERTIFICACIONES
 ========================================================== -->
+<!-- =========================================================
+     CERTIFICACIONES
+========================================================== -->
 
 <section
-    class="section"
+    class="section certifications-section"
     id="certificaciones"
 >
 
     <div class="container">
 
-        <div class="section-heading">
 
-            <span>
+        <!-- CABECERA -->
+
+        <div class="certifications-heading">
+
+            <div class="certifications-heading-number">
                 05
-            </span>
+            </div>
 
-            <div>
+            <div class="certifications-heading-content">
 
-                <small>
+                <span class="certifications-kicker">
                     FORMACIÓN CONTINUA
-                </small>
+                </span>
 
                 <h2>
-                    Certificaciones
+                    Conocimiento
+                    <span>validado.</span>
                 </h2>
+
+                <p>
+                    Certificaciones complementarias en desarrollo,
+                    bases de datos, análisis, herramientas digitales
+                    y ciberseguridad.
+                </p>
 
             </div>
 
         </div>
 
 
-        <p class="section-description">
+        <!-- RESUMEN -->
 
-            Formación complementaria en desarrollo,
-            bases de datos, análisis y ciberseguridad.
+        <div class="certifications-summary">
 
-        </p>
+            <div>
+                <strong>
+                    09
+                </strong>
+
+                <span>
+                    CERTIFICACIONES
+                </span>
+            </div>
+
+            <p>
+                Cada credencial puede abrirse para consultar
+                el certificado correspondiente.
+            </p>
+
+        </div>
 
 
-        <div class="cert-grid">
+        <!-- =================================================
+             LISTA DE CERTIFICACIONES
+        ================================================== -->
+
+        <div class="cert-list">
+
 
             <!-- TABLEAU -->
+
             <article
-                class="cert-card"
+                class="cert-item cert-card  cert-data"
                 data-title="Tableau"
                 data-provider="Kodree"
                 data-pdf="documentos/Tableau.pdf"
@@ -2027,24 +2543,47 @@
                 tabindex="0"
                 role="button"
             >
-                <span class="material-symbols-outlined">
+
+                <span class="cert-number">
+                    01
+                </span>
+
+                <span class="material-symbols-outlined cert-icon">
                     monitoring
                 </span>
 
-                <div>
-                    <h3>Tableau</h3>
-                    <p>Visualización y análisis de datos</p>
+                <div class="cert-info">
 
-                    <span class="cert-view">
-                        Ver certificado
+                    <span class="cert-category">
+                        DATA
                     </span>
+
+                    <h3>
+                        Tableau
+                    </h3>
+
+                    <p>
+                        Visualización y análisis de datos
+                    </p>
+
                 </div>
+
+                <div class="cert-provider">
+                    Kodree
+                </div>
+
+                <span class="material-symbols-outlined cert-arrow">
+                    arrow_outward
+                </span>
+
             </article>
 
 
+
             <!-- CYBERSECURITY AND AI -->
+
             <article
-                class="cert-card"
+                class="cert-item cert-card cert-security"
                 data-title="Cybersecurity and AI"
                 data-provider="Kodree"
                 data-pdf="documentos/Cybersecurity and AI.pdf"
@@ -2052,24 +2591,47 @@
                 tabindex="0"
                 role="button"
             >
-                <span class="material-symbols-outlined">
+
+                <span class="cert-number">
+                    02
+                </span>
+
+                <span class="material-symbols-outlined cert-icon">
                     smart_toy
                 </span>
 
-                <div>
-                    <h3>Cybersecurity and AI</h3>
-                    <p>Ciberseguridad e inteligencia artificial</p>
+                <div class="cert-info">
 
-                    <span class="cert-view">
-                        Ver certificado
+                    <span class="cert-category">
+                        SECURITY · AI
                     </span>
+
+                    <h3>
+                        Cybersecurity and AI
+                    </h3>
+
+                    <p>
+                        Ciberseguridad e inteligencia artificial
+                    </p>
+
                 </div>
+
+                <div class="cert-provider">
+                    Kodree
+                </div>
+
+                <span class="material-symbols-outlined cert-arrow">
+                    arrow_outward
+                </span>
+
             </article>
 
 
+
             <!-- TEAM SECURITY -->
+
             <article
-                class="cert-card"
+                class="cert-item cert-card cert-security"
                 data-title="Team Security"
                 data-provider="Kodree"
                 data-pdf="documentos/Team Security.pdf"
@@ -2077,24 +2639,47 @@
                 tabindex="0"
                 role="button"
             >
-                <span class="material-symbols-outlined">
+
+                <span class="cert-number">
+                    03
+                </span>
+
+                <span class="material-symbols-outlined cert-icon">
                     group
                 </span>
 
-                <div>
-                    <h3>Team Security</h3>
-                    <p>Seguridad y buenas prácticas en equipos</p>
+                <div class="cert-info">
 
-                    <span class="cert-view">
-                        Ver certificado
+                    <span class="cert-category">
+                        SECURITY
                     </span>
+
+                    <h3>
+                        Team Security
+                    </h3>
+
+                    <p>
+                        Seguridad y buenas prácticas en equipos
+                    </p>
+
                 </div>
+
+                <div class="cert-provider">
+                    Kodree
+                </div>
+
+                <span class="material-symbols-outlined cert-arrow">
+                    arrow_outward
+                </span>
+
             </article>
 
 
+
             <!-- DATA ANALYTICS -->
+
             <article
-                class="cert-card"
+                class="cert-item cert-card cert-data"
                 data-title="Data Analytics"
                 data-provider="Kodree"
                 data-pdf="documentos/Data Analytics.pdf"
@@ -2102,24 +2687,47 @@
                 tabindex="0"
                 role="button"
             >
-                <span class="material-symbols-outlined">
+
+                <span class="cert-number">
+                    04
+                </span>
+
+                <span class="material-symbols-outlined cert-icon">
                     analytics
                 </span>
 
-                <div>
-                    <h3>Data Analytics</h3>
-                    <p>Análisis y procesamiento de datos</p>
+                <div class="cert-info">
 
-                    <span class="cert-view">
-                        Ver certificado
+                    <span class="cert-category">
+                        DATA
                     </span>
+
+                    <h3>
+                        Data Analytics
+                    </h3>
+
+                    <p>
+                        Análisis y procesamiento de datos
+                    </p>
+
                 </div>
+
+                <div class="cert-provider">
+                    Kodree
+                </div>
+
+                <span class="material-symbols-outlined cert-arrow">
+                    arrow_outward
+                </span>
+
             </article>
 
 
+
             <!-- HOW THE WEB WORKS -->
+
             <article
-                class="cert-card"
+                class="cert-item cert-card cert-web"
                 data-title="How the Web Works"
                 data-provider="Kodree"
                 data-pdf="documentos/How the Web Works.pdf"
@@ -2127,24 +2735,47 @@
                 tabindex="0"
                 role="button"
             >
-                <span class="material-symbols-outlined">
+
+                <span class="cert-number">
+                    05
+                </span>
+
+                <span class="material-symbols-outlined cert-icon">
                     language
                 </span>
 
-                <div>
-                    <h3>How the Web Works</h3>
-                    <p>Fundamentos y funcionamiento de la Web</p>
+                <div class="cert-info">
 
-                    <span class="cert-view">
-                        Ver certificado
+                    <span class="cert-category">
+                        WEB
                     </span>
+
+                    <h3>
+                        How the Web Works
+                    </h3>
+
+                    <p>
+                        Fundamentos y funcionamiento de la Web
+                    </p>
+
                 </div>
+
+                <div class="cert-provider">
+                    Kodree
+                </div>
+
+                <span class="material-symbols-outlined cert-arrow">
+                    arrow_outward
+                </span>
+
             </article>
 
 
+
             <!-- SQL -->
+
             <article
-                class="cert-card"
+                class="cert-item cert-card cert-database"
                 data-title="SQL"
                 data-provider="Kodree"
                 data-pdf="documentos/SQL.pdf"
@@ -2152,24 +2783,47 @@
                 tabindex="0"
                 role="button"
             >
-                <span class="material-symbols-outlined">
+
+                <span class="cert-number">
+                    06
+                </span>
+
+                <span class="material-symbols-outlined cert-icon">
                     database
                 </span>
 
-                <div>
-                    <h3>SQL</h3>
-                    <p>Bases de datos y consultas SQL</p>
+                <div class="cert-info">
 
-                    <span class="cert-view">
-                        Ver certificado
+                    <span class="cert-category">
+                        DATABASE
                     </span>
+
+                    <h3>
+                        SQL
+                    </h3>
+
+                    <p>
+                        Bases de datos y consultas SQL
+                    </p>
+
                 </div>
+
+                <div class="cert-provider">
+                    Kodree
+                </div>
+
+                <span class="material-symbols-outlined cert-arrow">
+                    arrow_outward
+                </span>
+
             </article>
 
 
-            <!-- CYBERSECURITY FOR NON-TECH PROFESSIONALS -->
+
+            <!-- CYBERSECURITY NON TECH -->
+
             <article
-                class="cert-card"
+                class="cert-item cert-card cert-security"
                 data-title="Cybersecurity for non-tech Professionals"
                 data-provider="Kodree"
                 data-pdf="documentos/Cybersecurity for non-tech Professionals.pdf"
@@ -2177,27 +2831,48 @@
                 tabindex="0"
                 role="button"
             >
-                <span class="material-symbols-outlined">
+
+                <span class="cert-number">
+                    07
+                </span>
+
+                <span class="material-symbols-outlined cert-icon">
                     security
                 </span>
 
-                <div>
+                <div class="cert-info">
+
+                    <span class="cert-category">
+                        SECURITY
+                    </span>
+
                     <h3>
-                        Cybersecurity for Non-Tech Professionals
+                        Cybersecurity for
+                        Non-Tech Professionals
                     </h3>
 
-                    <p>Fundamentos y buenas prácticas de ciberseguridad</p>
+                    <p>
+                        Fundamentos y buenas prácticas de ciberseguridad
+                    </p>
 
-                    <span class="cert-view">
-                        Ver certificado
-                    </span>
                 </div>
+
+                <div class="cert-provider">
+                    Kodree
+                </div>
+
+                <span class="material-symbols-outlined cert-arrow">
+                    arrow_outward
+                </span>
+
             </article>
 
 
+
             <!-- GIT AND TERMINAL -->
+
             <article
-                class="cert-card"
+                class="cert-item cert-card cert-dev"
                 data-title="Git and Terminal"
                 data-provider="Kodree"
                 data-date="18 de marzo de 2026"
@@ -2206,22 +2881,47 @@
                 tabindex="0"
                 role="button"
             >
-                <span class="material-symbols-outlined">
+
+                <span class="cert-number">
+                    08
+                </span>
+
+                <span class="material-symbols-outlined cert-icon">
                     terminal
                 </span>
 
-                <div>
-                    <h3>Git and Terminal</h3>
-                    <p>Git, control de versiones y uso de terminal</p>
+                <div class="cert-info">
 
-                    <span class="cert-view">
-                        Ver certificado
+                    <span class="cert-category">
+                        DEVELOPMENT
                     </span>
+
+                    <h3>
+                        Git and Terminal
+                    </h3>
+
+                    <p>
+                        Git, control de versiones y uso de terminal
+                    </p>
+
                 </div>
+
+                <div class="cert-provider">
+                    Kodree
+                </div>
+
+                <span class="material-symbols-outlined cert-arrow">
+                    arrow_outward
+                </span>
+
             </article>
 
+
+
+            <!-- GOOGLE SHEETS -->
+
             <article
-                class="cert-card"
+                class="cert-item cert-card cert-data"
                 data-title="Google Sheets"
                 data-provider="Kodree"
                 data-pdf="documentos/Google Sheets.pdf"
@@ -2230,97 +2930,151 @@
                 role="button"
             >
 
-                <span class="material-symbols-outlined">
+                <span class="cert-number">
+                    09
+                </span>
+
+                <span class="material-symbols-outlined cert-icon">
                     table_chart
                 </span>
 
-                <div>
+                <div class="cert-info">
+
+                    <span class="cert-category">
+                        DATA · PRODUCTIVITY
+                    </span>
 
                     <h3>
                         Google Sheets
                     </h3>
 
                     <p>
-                        Hojas de cálculo, organización y análisis de datos
+                        Hojas de cálculo, organización
+                        y análisis de datos
                     </p>
-
-                    <span class="cert-view">
-                        Ver certificado
-                    </span>
 
                 </div>
 
+                <div class="cert-provider">
+                    Kodree
+                </div>
+
+                <span class="material-symbols-outlined cert-arrow">
+                    arrow_outward
+                </span>
+
             </article>
+
 
         </div>
 
 
-        <div class="cert-note">
+        <!-- PIE -->
+
+        <div class="certifications-footer">
 
             <span class="material-symbols-outlined">
                 verified
             </span>
 
             <p>
-                Los certificados podrán visualizarse
-                individualmente desde esta sección.
+                Selecciona una certificación para
+                <strong>
+                    visualizar la credencial.
+                </strong>
             </p>
 
         </div>
+
 
     </div>
 
 </section>
 
 
-
 <!-- =========================================================
      EDUCACIÓN
 ========================================================== -->
+<!-- =========================================================
+     FORMACIÓN ACADÉMICA
+========================================================== -->
 
-<section class="section section-alt">
+<section
+    class="section education-section"
+    id="educacion"
+>
 
     <div class="container">
 
-        <div class="section-heading">
 
-            <span>
+        <!-- CABECERA -->
+
+        <div class="education-heading">
+
+            <div class="education-heading-number">
                 07
-            </span>
+            </div>
 
-            <div>
+            <div class="education-heading-content">
 
-                <small>
+                <span class="education-kicker">
                     EDUCACIÓN
-                </small>
+                </span>
 
                 <h2>
-                    Formación académica
+                    Formación
+                    <span>académica.</span>
                 </h2>
+
+                <p>
+                    Mi recorrido académico en tecnología,
+                    computación e ingeniería de sistemas.
+                </p>
 
             </div>
 
         </div>
 
 
-        <div class="education-grid">
+        <!-- RECORRIDO -->
+
+        <div class="education-timeline">
 
 
-            <article class="education-card">
+            <!-- UNIVERSIDAD -->
 
-                <span class="material-symbols-outlined">
-                    account_balance
-                </span>
+            <article class="education-item education-current">
 
-                <div>
+                <div class="education-marker">
 
-                    <span class="education-status">
+                    <span></span>
+
+                </div>
+
+
+                <div class="education-meta">
+
+                    <span class="education-state">
+                        <i></i>
                         EN CURSO
+                    </span>
+
+                    <strong>
+                        ACTUALIDAD
+                    </strong>
+
+                </div>
+
+
+                <div class="education-content">
+
+                    <span class="education-type">
+                        UNIVERSIDAD
                     </span>
 
                     <h3>
                         Universidad Mariano Gálvez
-                        de Guatemala
+                        <span>de Guatemala</span>
                     </h3>
 
                     <p>
@@ -2328,30 +3082,63 @@
                         y Ciencias de la Computación
                     </p>
 
-                    <strong>
-                        8.º semestre
-                    </strong>
+
+                    <div class="education-progress">
+
+                        <span>
+                            PROGRESO ACADÉMICO
+                        </span>
+
+                        <strong>
+                            8.º semestre
+                        </strong>
+
+                    </div>
 
                 </div>
+
+
+                <span class="material-symbols-outlined education-icon">
+                    account_balance
+                </span>
 
             </article>
 
 
 
-            <article class="education-card">
+            <!-- BACHILLERATO -->
 
-                <span class="material-symbols-outlined">
-                    school
-                </span>
+            <article class="education-item education-completed">
 
-                <div>
+                <div class="education-marker">
 
-                    <span class="education-status completed">
+                    <span></span>
+
+                </div>
+
+
+                <div class="education-meta">
+
+                    <span class="education-state">
                         COMPLETADO
                     </span>
 
+                    <strong>
+                        BACHILLERATO
+                    </strong>
+
+                </div>
+
+
+                <div class="education-content">
+
+                    <span class="education-type">
+                        EDUCACIÓN MEDIA
+                    </span>
+
                     <h3>
-                        Colegio Adventista Orión
+                        Colegio Adventista
+                        <span>Orión</span>
                     </h3>
 
                     <p>
@@ -2361,14 +3148,43 @@
 
                 </div>
 
+
+                <span class="material-symbols-outlined education-icon">
+                    school
+                </span>
+
             </article>
 
+
         </div>
+
+
+        <!-- CIERRE -->
+
+        <div class="education-footer">
+
+            <span>
+                SISTEMAS
+            </span>
+
+            <i></i>
+
+            <span>
+                COMPUTACIÓN
+            </span>
+
+            <i></i>
+
+            <span>
+                DESARROLLO
+            </span>
+
+        </div>
+
 
     </div>
 
 </section>
-
 
 <!-- =========================================================
      DOCUMENTACIÓN
@@ -2381,117 +3197,191 @@
 
     <div class="container">
 
-        <div class="documentation-card">
-
-            <!-- ICONO -->
-
-            <div class="documentation-icon">
-
-                <span class="material-symbols-outlined">
-                    verified_user
-                </span>
-
-            </div>
+        <div class="documentation-layout">
 
 
-            <!-- INFORMACIÓN -->
+            <!-- =================================================
+                 MENSAJE PRINCIPAL
+            ================================================== -->
 
-            <div class="documentation-content">
+            <div class="documentation-main">
 
-                <span class="documentation-label">
+                <span class="documentation-kicker">
                     DOCUMENTACIÓN PROFESIONAL
                 </span>
 
                 <h2>
-                    Información y documentación de respaldo
+                    Todo listo para
+                    <span>conocer mi perfil.</span>
                 </h2>
 
                 <p>
-
-                    Las certificaciones profesionales y mi
-                    currículum están disponibles para consulta
-                    desde este portafolio.
-
-                    Por seguridad y protección de datos personales,
-                    la documentación legal y demás documentos
-                    de respaldo se presentan únicamente durante
-                    un proceso formal de entrevista o contratación.
-
+                    Mi currículum y certificaciones están disponibles
+                    directamente desde este portafolio. La documentación
+                    personal o legal de respaldo se proporciona únicamente
+                    durante un proceso formal de entrevista o contratación.
                 </p>
 
 
-                <!-- ESTADOS -->
+                <!-- ACCIONES -->
 
-                <div class="documentation-status">
+                <div class="documentation-actions">
 
-
-                    <!-- CERTIFICACIONES -->
-
-                    <div class="documentation-item">
+                    <a
+                        href="documentos/CURRICULUM CERTIFICACIONES.pdf"
+                        download
+                        class="documentation-download"
+                    >
 
                         <span class="material-symbols-outlined">
-                            workspace_premium
+                            download
                         </span>
 
                         <div>
-
                             <small>
-                                CERTIFICACIONES
+                                PDF
                             </small>
 
                             <strong>
-                                Disponibles en línea
+                                Descargar CV
                             </strong>
-
                         </div>
 
-                    </div>
-
-
-                    <!-- CURRÍCULUM -->
-
-                    <div class="documentation-item">
-
-                        <span class="material-symbols-outlined">
-                            description
+                        <span class="material-symbols-outlined documentation-arrow">
+                            arrow_downward
                         </span>
 
-                        <div>
-
-                            <small>
-                                CURRÍCULUM
-                            </small>
-
-                            <strong>
-                                Disponible en línea
-                            </strong>
-
-                        </div>
-
-                    </div>
+                    </a>
 
 
-                    <!-- DOCUMENTOS PERSONALES -->
+                    <a
+                        href="#certificaciones"
+                        class="documentation-cert-link"
+                    >
 
-                    <div class="documentation-item private">
+                        Ver certificaciones
 
                         <span class="material-symbols-outlined">
-                            lock
+                            arrow_upward
                         </span>
 
-                        <div>
+                    </a>
 
-                            <small>
-                                DOCUMENTACIÓN PERSONAL
-                            </small>
+                </div>
 
-                            <strong>
-                                Disponible en proceso formal
-                            </strong>
+            </div>
 
-                        </div>
+
+
+            <!-- =================================================
+                 DISPONIBILIDAD
+            ================================================== -->
+
+            <div class="documentation-panel">
+
+                <div class="documentation-panel-heading">
+
+                    <span>
+                        DISPONIBILIDAD
+                    </span>
+
+                    <span class="documentation-panel-status">
+                        <i></i>
+                        ACTUALIZADO
+                    </span>
+
+                </div>
+
+
+                <!-- CV -->
+
+                <div class="documentation-item">
+
+                    <span class="documentation-number">
+                        01
+                    </span>
+
+                    <span class="material-symbols-outlined">
+                        description
+                    </span>
+
+                    <div>
+
+                        <small>
+                            CURRÍCULUM
+                        </small>
+
+                        <strong>
+                            Descarga directa
+                        </strong>
 
                     </div>
+
+                    <span class="documentation-available">
+                        DISPONIBLE
+                    </span>
+
+                </div>
+
+
+                <!-- CERTIFICACIONES -->
+
+                <div class="documentation-item">
+
+                    <span class="documentation-number">
+                        02
+                    </span>
+
+                    <span class="material-symbols-outlined">
+                        workspace_premium
+                    </span>
+
+                    <div>
+
+                        <small>
+                            CERTIFICACIONES
+                        </small>
+
+                        <strong>
+                            Consulta en línea
+                        </strong>
+
+                    </div>
+
+                    <span class="documentation-available">
+                        DISPONIBLE
+                    </span>
+
+                </div>
+
+
+                <!-- DOCUMENTACIÓN PERSONAL -->
+
+                <div class="documentation-item documentation-private">
+
+                    <span class="documentation-number">
+                        03
+                    </span>
+
+                    <span class="material-symbols-outlined">
+                        lock
+                    </span>
+
+                    <div>
+
+                        <small>
+                            DOCUMENTACIÓN PERSONAL
+                        </small>
+
+                        <strong>
+                            Proceso formal
+                        </strong>
+
+                    </div>
+
+                    <span class="documentation-restricted">
+                        PRIVADO
+                    </span>
 
                 </div>
 
@@ -2501,9 +3391,7 @@
 
     </div>
 
-</section>
-
-<!-- =========================================================
+</section><!-- =========================================================
      CONTACTO
 ========================================================== -->
 
@@ -2514,61 +3402,146 @@
 
     <div class="container">
 
-        <div class="contact-card">
+        <div class="contact-layout">
 
 
-            <div>
+            <!-- ENCABEZADO -->
 
-                <span class="contact-label">
-                    CONTACTO
+            <div class="contact-intro">
+
+                <span class="contact-kicker">
+                    08 · CONTACTO
                 </span>
 
                 <h2>
-                    ¿Hablamos?
+                    Construyamos
+                    <span>algo juntos.</span>
                 </h2>
 
                 <p>
-
-                    Estoy disponible para oportunidades
-                    profesionales relacionadas con desarrollo
-                    de software, soporte, infraestructura TI
-                    y tecnología.
-
+                    Estoy disponible para oportunidades profesionales
+                    relacionadas con desarrollo de software,
+                    infraestructura TI, soporte y tecnología.
                 </p>
 
             </div>
 
 
 
-            <div class="contact-buttons">
+            <!-- =================================================
+                 CONTACTO PRINCIPAL
+            ================================================== -->
 
+            <div class="contact-main">
+
+                <span>
+                    ¿TIENES UNA OPORTUNIDAD O PROYECTO?
+                </span>
 
                 <a
                     href="mailto:abdielcarcuz@gmail.com"
-                    class="btn btn-primary"
+                    class="contact-email"
                 >
-
-                    <span class="material-symbols-outlined">
-                        mail
+                    <span>
+                        abdielcarcuz@gmail.com
                     </span>
 
-                    Correo electrónico
-
+                    <span class="material-symbols-outlined">
+                        arrow_outward
+                    </span>
                 </a>
 
+            </div>
+
+
+
+            <!-- =================================================
+                 OTROS CANALES
+            ================================================== -->
+
+            <div class="contact-links">
+
+
+                <!-- WHATSAPP -->
 
                 <a
                     href="https://wa.me/50255694424?text=Que%20tal%20Jair%2C%20hemos%20visto%20tu%20perfil%20y%20estamos%20interesados%20en%20conocerte%20m%C3%A1s"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="btn btn-secondary"
+                    class="contact-link"
                 >
+
                     <span class="material-symbols-outlined">
                         chat
                     </span>
 
-                    WhatsApp
+                    <div>
+
+                        <small>
+                            MENSAJE DIRECTO
+                        </small>
+
+                        <strong>
+                            WhatsApp
+                        </strong>
+
+                    </div>
+
+                    <span class="material-symbols-outlined">
+                        arrow_outward
+                    </span>
+
                 </a>
+
+
+
+                <!-- GITHUB -->
+
+                <a
+                    href="https://github.com/LordFix410"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="contact-link"
+                >
+
+                    <span class="material-symbols-outlined">
+                        code
+                    </span>
+
+                    <div>
+
+                        <small>
+                            CÓDIGO Y PROYECTOS
+                        </small>
+
+                        <strong>
+                            GitHub
+                        </strong>
+
+                    </div>
+
+                    <span class="material-symbols-outlined">
+                        arrow_outward
+                    </span>
+
+                </a>
+
+            </div>
+
+
+
+            <!-- DISPONIBILIDAD -->
+
+            <div class="contact-availability">
+
+                <span>
+                    <i></i>
+                    DISPONIBLE PARA OPORTUNIDADES
+                </span>
+
+                <p>
+                    Guatemala · Remoto / Presencial
+                </p>
 
             </div>
 
@@ -2577,6 +3550,7 @@
     </div>
 
 </section>
+
 
 </main>
 
@@ -2590,20 +3564,83 @@
 
     <div class="container">
 
-        <p>
-            Jair Abdiel Carcúz López
-            <span>•</span>
-            Ingeniería en Sistemas
-        </p>
+        <div class="footer-layout">
 
-        <small>
-            Portafolio profesional
-        </small>
+
+            <div class="footer-identity">
+
+                <strong>
+                    JA
+                </strong>
+
+                <div>
+
+                    <span>
+                        Jair Abdiel Carcúz López
+                    </span>
+
+                    <small>
+                        Ingeniería en Sistemas
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-message">
+
+                <span>
+                    SOFTWARE
+                </span>
+
+                <i></i>
+
+                <span>
+                    INFRAESTRUCTURA
+                </span>
+
+                <i></i>
+
+                <span>
+                    TECNOLOGÍA
+                </span>
+
+            </div>
+
+
+            <a
+                href="#inicio"
+                class="footer-top"
+                aria-label="Volver al inicio"
+            >
+
+                VOLVER ARRIBA
+
+                <span class="material-symbols-outlined">
+                    north
+                </span>
+
+            </a>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 Jair Abdiel Carcúz López
+            </span>
+
+            <span>
+                PORTAFOLIO PROFESIONAL
+            </span>
+
+        </div>
 
     </div>
 
 </footer>
-
 
 
 <!-- =========================================================
