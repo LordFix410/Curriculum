@@ -10043,3 +10043,246 @@ body.modal-open {
         font-size: 21px !important;
     }
 }
+
+/* ============================================================
+   FIX DOCUMENTACIÓN - MÓVIL
+============================================================ */
+
+@media (max-width: 900px) {
+
+    .documentation-section {
+        width: 100% !important;
+        padding: 70px 0 !important;
+        overflow: hidden !important;
+    }
+
+
+    .documentation-section .container {
+        width: 100% !important;
+        max-width: none !important;
+
+        padding-left: 24px !important;
+        padding-right: 24px !important;
+
+        margin: 0 auto !important;
+    }
+
+
+    /* IMPORTANTE:
+       escritorio = 2 columnas
+       móvil = una debajo de la otra
+    */
+
+    .documentation-layout {
+        width: 100% !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+
+        gap: 55px !important;
+
+        grid-template-columns: none !important;
+    }
+
+
+    /* =========================
+       TEXTO PRINCIPAL
+    ========================= */
+
+    .documentation-main {
+        width: 100% !important;
+        max-width: none !important;
+        min-width: 0 !important;
+    }
+
+
+    .documentation-kicker {
+        font-size: 0.68rem !important;
+    }
+
+
+    .documentation-main h2 {
+        width: 100% !important;
+        max-width: none !important;
+
+        margin-bottom: 24px !important;
+
+        font-size: clamp(2.6rem, 12vw, 4rem) !important;
+        line-height: 0.98 !important;
+
+        letter-spacing: -1.8px !important;
+
+        overflow-wrap: normal !important;
+        word-break: normal !important;
+    }
+
+
+    .documentation-main h2 span {
+        display: inline !important;
+    }
+
+
+    .documentation-main > p {
+        width: 100% !important;
+        max-width: none !important;
+
+        font-size: 1rem !important;
+        line-height: 1.7 !important;
+
+        overflow-wrap: normal !important;
+        word-break: normal !important;
+    }
+
+
+    /* =========================
+       BOTONES
+    ========================= */
+
+    .documentation-actions {
+        width: 100% !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+
+        gap: 15px !important;
+
+        margin-top: 30px !important;
+    }
+
+
+    .documentation-download {
+        width: 100% !important;
+        min-width: 0 !important;
+    }
+
+
+    .documentation-cert-link {
+        width: fit-content !important;
+    }
+
+
+    /* =========================
+       PANEL DISPONIBILIDAD
+    ========================= */
+
+    .documentation-panel {
+        width: 100% !important;
+        max-width: none !important;
+        min-width: 0 !important;
+
+        position: relative !important;
+    }
+
+
+    .documentation-panel-heading {
+        width: 100% !important;
+
+        min-height: 50px !important;
+    }
+
+
+    .documentation-item {
+        width: 100% !important;
+
+        grid-template-columns:
+            30px
+            30px
+            minmax(0, 1fr) !important;
+
+        gap: 12px !important;
+
+        padding: 18px 0 !important;
+
+        min-height: auto !important;
+    }
+
+
+    .documentation-item > div {
+        min-width: 0 !important;
+    }
+
+
+    .documentation-available,
+    .documentation-restricted {
+        grid-column: 3 !important;
+
+        justify-self: start !important;
+
+        padding: 5px 0 0 !important;
+    }
+
+}
+
+
+/* ============================================================
+   TELÉFONOS PEQUEÑOS
+============================================================ */
+
+@media (max-width: 480px) {
+
+    .documentation-section {
+        padding:
+            60px 0 !important;
+    }
+
+
+    .documentation-section .container {
+        padding-left:
+            20px !important;
+
+        padding-right:
+            20px !important;
+    }
+
+
+    .documentation-layout {
+        gap:
+            45px !important;
+    }
+
+
+    .documentation-main h2 {
+        font-size:
+            clamp(2.5rem, 13vw, 3.4rem) !important;
+
+        line-height:
+            0.98 !important;
+    }
+
+
+    .documentation-main > p {
+        font-size:
+            0.95rem !important;
+
+        line-height:
+            1.65 !important;
+    }
+
+
+    .documentation-panel-heading {
+        gap:
+            10px !important;
+    }
+
+
+    .documentation-item {
+        grid-template-columns:
+            25px
+            28px
+            minmax(0, 1fr) !important;
+    }
+
+
+    .documentation-item small {
+        font-size:
+            0.62rem !important;
+    }
+
+
+    .documentation-item strong {
+        font-size:
+            0.85rem !important;
+    }
+
+}
