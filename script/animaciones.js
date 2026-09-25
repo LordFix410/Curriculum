@@ -282,7 +282,7 @@
 
             elemento.style.setProperty(
                 "--d",
-                `${140 + indice * 160}ms`
+                `${180 + indice * 220}ms`
             );
 
             /*
@@ -496,7 +496,7 @@
 
         const actualizar = limitarConFrame(() => {
 
-            const desplazamiento = window.scrollY * 0.12;
+            const desplazamiento = window.scrollY * 0.28;
 
             orbes.forEach((orbe, indice) => {
 
@@ -581,8 +581,8 @@
 
 
     /* ============================================================
-       8. LUZ QUE SIGUE AL CURSOR
-       (tarjetas de tecnología y el proyecto principal)
+       8. LUZ + INCLINACIÓN 3D QUE SIGUEN AL CURSOR
+       (tecnología, certificados y el proyecto principal)
     ============================================================ */
 
     function iniciarLuzCursor() {
@@ -591,10 +591,16 @@
             return;
         }
 
-        const objetivos =
-            document.querySelectorAll(".tech-item, .project-main");
+        const objetivosLuz =
+            document.querySelectorAll(
+                ".tech-item, .project-main, .cert-item"
+            );
 
-        objetivos.forEach(objetivo => {
+        const objetivosInclinacion =
+            document.querySelectorAll(".tech-item");
+
+
+        objetivosLuz.forEach(objetivo => {
 
             objetivo.addEventListener("mousemove", evento => {
 
@@ -609,6 +615,41 @@
 
                 objetivo.style.setProperty("--mx", `${x}%`);
                 objetivo.style.setProperty("--my", `${y}%`);
+
+            });
+
+        });
+
+
+        /*
+            Solo las tarjetas de tecnología se inclinan en 3D
+            (son las más grandes y donde más se nota el efecto).
+        */
+
+        objetivosInclinacion.forEach(objetivo => {
+
+            objetivo.addEventListener("mousemove", evento => {
+
+                const limites =
+                    objetivo.getBoundingClientRect();
+
+                const x =
+                    (evento.clientX - limites.left) / limites.width;
+
+                const y =
+                    (evento.clientY - limites.top) / limites.height;
+
+                /* de -1 a 1, con el centro en 0 */
+
+                objetivo.style.setProperty("--rx", (x * 2 - 1).toFixed(3));
+                objetivo.style.setProperty("--ry", (y * 2 - 1).toFixed(3));
+
+            });
+
+            objetivo.addEventListener("mouseleave", () => {
+
+                objetivo.style.setProperty("--rx", 0);
+                objetivo.style.setProperty("--ry", 0);
 
             });
 
@@ -985,14 +1026,14 @@
                 */
 
                 objetivo.style.transform =
-                    `translate(${relativoX * 0.22}px, ${relativoY * 0.28}px)`;
+                    `translate(${relativoX * 0.4}px, ${relativoY * 0.45}px) scale(1.04)`;
 
             });
 
 
             objetivo.addEventListener("mouseleave", () => {
 
-                objetivo.style.transform = "translate(0, 0)";
+                objetivo.style.transform = "translate(0, 0) scale(1)";
 
             });
 

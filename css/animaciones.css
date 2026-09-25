@@ -65,27 +65,39 @@
     animation-duration: 1.2s;
 }
 
+.js-anim .anim-reveal.anim-in {
+    animation-duration: 1.15s;
+}
+
 @keyframes revealUp {
     from {
         opacity: 0;
-        transform: translate3d(0, 28px, 0);
+        transform: translate3d(0, 52px, 0);
+        filter: blur(6px);
+    }
+
+    60% {
+        filter: blur(0);
     }
 
     to {
         opacity: 1;
         transform: none;
+        filter: blur(0);
     }
 }
 
 @keyframes revealScale {
     from {
         opacity: 0;
-        transform: translate3d(0, 40px, 0) scale(0.96);
+        transform: translate3d(0, 64px, 0) scale(0.9);
+        filter: blur(8px);
     }
 
     to {
         opacity: 1;
         transform: none;
+        filter: blur(0);
     }
 }
 
@@ -130,8 +142,11 @@
 .hero-photo {
     transform:
         perspective(900px)
-        rotateY(calc(var(--tx, 0) * 6deg))
-        rotateX(calc(var(--ty, 0) * -5deg));
+        rotateY(calc(var(--tx, 0) * 13deg))
+        rotateX(calc(var(--ty, 0) * -10deg))
+        translateZ(10px);
+
+    transition: transform 0.15s linear;
 
     will-change: transform;
 }
@@ -140,24 +155,30 @@
     transform:
         rotate(3deg)
         translate3d(
-            calc(var(--tx, 0) * -14px),
-            calc(var(--ty, 0) * -10px),
+            calc(var(--tx, 0) * -28px),
+            calc(var(--ty, 0) * -20px),
             0
         );
+
+    transition: transform 0.15s linear;
 }
 
 /* "translate" es independiente de "transform", no rompe heroFloat */
 
 .hero-floating-top {
     translate:
-        calc(var(--tx, 0) * -16px)
-        calc(var(--ty, 0) * -12px);
+        calc(var(--tx, 0) * -30px)
+        calc(var(--ty, 0) * -22px);
+
+    transition: translate 0.15s linear;
 }
 
 .hero-floating-bottom {
     translate:
-        calc(var(--tx, 0) * 18px)
-        calc(var(--ty, 0) * 14px);
+        calc(var(--tx, 0) * 32px)
+        calc(var(--ty, 0) * 24px);
+
+    transition: translate 0.15s linear;
 }
 
 .hero-orb {
@@ -183,29 +204,78 @@
 
 
 /* ============================================================
-   6. LUZ QUE SIGUE AL CURSOR (tecnologías y proyecto principal)
+   6. LUZ + INCLINACIÓN 3D QUE SIGUEN AL CURSOR
+   (tarjetas de tecnología, certificados y proyecto principal)
 ============================================================ */
 
-.tech-item:hover {
-    background-image:
-        radial-gradient(
-            380px circle at var(--mx, 50%) var(--my, 50%),
-            var(--tech-glow),
-            transparent 65%
-        );
+@media (hover: hover) and (pointer: fine) {
+
+    .tech-item,
+    .cert-item,
+    .project-row {
+        transition:
+            transform 0.35s var(--ease-out),
+            box-shadow 0.35s var(--ease-out),
+            background 0.35s ease;
+
+        will-change: transform;
+    }
+
+    .tech-item:hover {
+        transform:
+            perspective(800px)
+            rotateX(calc(var(--ry, 0) * -7deg))
+            rotateY(calc(var(--rx, 0) * 9deg))
+            translateY(-8px)
+            scale(1.015);
+
+        box-shadow:
+            0 30px 60px -20px rgba(0, 0, 0, 0.55),
+            0 0 0 1px var(--tech-accent) inset;
+
+        background-image:
+            radial-gradient(
+                460px circle at var(--mx, 50%) var(--my, 50%),
+                var(--tech-glow),
+                transparent 68%
+            );
+
+        z-index: 3;
+    }
+
+    .cert-item:hover {
+        transform: translateY(-4px);
+
+        box-shadow:
+            0 22px 45px -22px rgba(0, 0, 0, 0.55);
+    }
+
+    .project-row:hover {
+        transform: translateX(10px);
+
+        box-shadow:
+            -30px 0 45px -35px var(--row-accent);
+    }
+
+}
+
+.project-main {
+    transition: box-shadow 0.4s ease, background 0.4s ease;
 }
 
 .project-main:hover {
+    box-shadow: 0 40px 90px -35px rgba(251, 113, 133, 0.35);
+
     background:
         radial-gradient(
-            520px circle at var(--mx, 50%) var(--my, 50%),
-            rgba(251, 113, 133, 0.09),
-            transparent 60%
+            600px circle at var(--mx, 50%) var(--my, 50%),
+            rgba(251, 113, 133, 0.14),
+            transparent 62%
         ),
         linear-gradient(
             145deg,
-            rgba(255, 255, 255, 0.025),
-            rgba(255, 255, 255, 0.005)
+            rgba(255, 255, 255, 0.035),
+            rgba(255, 255, 255, 0.008)
         );
 }
 
@@ -283,34 +353,85 @@ main a:focus-visible,
 }
 
 .cursor-dot {
-    width: 6px;
-    height: 6px;
+    width: 8px;
+    height: 8px;
 
     background: #67e8f9;
 
-    transition: opacity 0.25s ease;
+    box-shadow: 0 0 12px 2px rgba(103, 232, 249, 0.7);
+
+    mix-blend-mode: difference;
+
+    transition: opacity 0.25s ease, transform 0.15s var(--ease-out);
 }
 
 .cursor-ring {
-    width: 34px;
-    height: 34px;
+    width: 42px;
+    height: 42px;
 
-    border: 1px solid rgba(103, 232, 249, 0.55);
+    border: 1.5px solid rgba(103, 232, 249, 0.6);
+
+    mix-blend-mode: difference;
 
     transition:
         opacity 0.25s ease,
-        width 0.3s var(--ease-out),
-        height 0.3s var(--ease-out),
-        border-color 0.3s ease,
-        background 0.3s ease;
+        width 0.35s var(--ease-out),
+        height 0.35s var(--ease-out),
+        border-color 0.35s ease,
+        background 0.35s ease;
 }
 
 .cursor-ring.is-active {
-    width: 54px;
-    height: 54px;
+    width: 74px;
+    height: 74px;
 
-    background: rgba(103, 232, 249, 0.08);
-    border-color: rgba(103, 232, 249, 0.85);
+    background: rgba(103, 232, 249, 0.12);
+    border-color: rgba(103, 232, 249, 0.95);
+}
+
+
+/* ============================================================
+   10.1 BRILLO QUE RECORRE LOS BOTONES PRINCIPALES
+============================================================ */
+
+.btn-primary,
+.project-link-primary,
+.documentation-download {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary::after,
+.project-link-primary::after,
+.documentation-download::after {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: -60%;
+
+    width: 45%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            115deg,
+            transparent,
+            rgba(255, 255, 255, 0.55),
+            transparent
+        );
+
+    transform: skewX(-20deg);
+
+    pointer-events: none;
+
+    transition: left 0.65s var(--ease-out);
+}
+
+.btn-primary:hover::after,
+.project-link-primary:hover::after,
+.documentation-download:hover::after {
+    left: 130%;
 }
 
 @media (hover: hover) and (pointer: fine) {
